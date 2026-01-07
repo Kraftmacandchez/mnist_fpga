@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="fpga_mnist_blk_mem_gen_1_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_blk_mem_gen_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fpga_mnist_blk_mem_gen_0_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="fpga_mnist_blk_mem_gen_1_0_synth_1"/>
+	</Run>
+	<Run Id="fpga_mnist_proc_sys_reset_0_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_proc_sys_reset_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fpga_mnist_axi_smc_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fpga_mnist_clk_wiz_0_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fpga_mnist_microblaze_0_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_microblaze_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fpga_mnist_axi_uartlite_0_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fpga_mnist_lmb_bram_if_cntlr_1_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_lmb_bram_if_cntlr_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fpga_mnist_mnist_accel_0_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_mnist_accel_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="fpga_mnist_lmb_bram_if_cntlr_0_0_synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_lmb_bram_if_cntlr_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="fpga_mnist_lmb_bram_if_cntlr_1_0_synth_1"/>
+	</Run>
+	<Run Id="synth_1" LaunchDir="C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="fpga_mnist_blk_mem_gen_1_0_synth_1"/>
+		<Parent Id="fpga_mnist_blk_mem_gen_0_0_synth_1"/>
+		<Parent Id="fpga_mnist_proc_sys_reset_0_0_synth_1"/>
+		<Parent Id="fpga_mnist_axi_smc_0_synth_1"/>
+		<Parent Id="fpga_mnist_clk_wiz_0_0_synth_1"/>
+		<Parent Id="fpga_mnist_microblaze_0_0_synth_1"/>
+		<Parent Id="fpga_mnist_axi_uartlite_0_0_synth_1"/>
+		<Parent Id="fpga_mnist_lmb_bram_if_cntlr_1_0_synth_1"/>
+		<Parent Id="fpga_mnist_mnist_accel_0_0_synth_1"/>
+		<Parent Id="fpga_mnist_lmb_bram_if_cntlr_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+		<Parameter Name="general.shortenLongPath" Val="true" Type="bool"/>
+	</Parameters>
+	<ProductInfo Name="vivado"/>
+</Runs>
+

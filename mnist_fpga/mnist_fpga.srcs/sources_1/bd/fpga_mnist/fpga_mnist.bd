@@ -1,0 +1,485 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x15DE6517BEC5F158",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../mnist_fpga.gen/sources_1/bd/fpga_mnist",
+      "name": "fpga_mnist",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2024.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "microblaze_0": "",
+      "axi_uartlite_0": "",
+      "mnist_accel_0": "",
+      "lmb_bram_if_cntlr_0": "",
+      "lmb_bram_if_cntlr_1": "",
+      "clk_wiz_0": "",
+      "proc_sys_reset_0": "",
+      "axi_smc": "",
+      "blk_mem_gen_0": "",
+      "blk_mem_gen_1": ""
+    },
+    "interface_ports": {
+      "usb_uart": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
+        "vlnv": "xilinx.com:interface:uart_rtl:1.0",
+        "port_maps": {
+          "RxD": {
+            "physical_name": "usb_uart_rxd",
+            "direction": "I"
+          },
+          "TxD": {
+            "physical_name": "usb_uart_txd",
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "ports": {
+      "Anode": {
+        "direction": "O"
+      },
+      "seven_segment_display": {
+        "direction": "O",
+        "left": "6",
+        "right": "0"
+      },
+      "sys_clock": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "fpga_mnist_sys_clock",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "rst_button": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "microblaze_0": {
+        "vlnv": "xilinx.com:ip:microblaze:11.0",
+        "ip_revision": "14",
+        "xci_name": "fpga_mnist_microblaze_0_0",
+        "xci_path": "ip\\fpga_mnist_microblaze_0_0\\fpga_mnist_microblaze_0_0.xci",
+        "inst_hier_path": "microblaze_0",
+        "parameters": {
+          "C_D_AXI": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "DLMB": {
+            "vlnv": "xilinx.com:interface:lmb_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          },
+          "ILMB": {
+            "vlnv": "xilinx.com:interface:lmb_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Instruction",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          },
+          "M_AXI_DP": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "Data",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "Data": {
+              "range": "4G",
+              "width": "32"
+            },
+            "Instruction": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        },
+        "hdl_attributes": {
+          "BMM_INFO_PROCESSOR": {
+            "value": "microblaze-le > fpga_mnist lmb_bram_if_cntlr_1 fpga_mnist lmb_bram_if_cntlr_0",
+            "value_src": "default"
+          },
+          "KEEP_HIERARCHY": {
+            "value": "yes",
+            "value_src": "default"
+          }
+        }
+      },
+      "axi_uartlite_0": {
+        "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
+        "ip_revision": "37",
+        "xci_name": "fpga_mnist_axi_uartlite_0_0",
+        "xci_path": "ip\\fpga_mnist_axi_uartlite_0_0\\fpga_mnist_axi_uartlite_0_0.xci",
+        "inst_hier_path": "axi_uartlite_0",
+        "parameters": {
+          "UARTLITE_BOARD_INTERFACE": {
+            "value": "usb_uart"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "mnist_accel_0": {
+        "vlnv": "xilinx.com:user:mnist_accel:1.0",
+        "ip_revision": "4",
+        "xci_name": "fpga_mnist_mnist_accel_0_0",
+        "xci_path": "ip\\fpga_mnist_mnist_accel_0_0\\fpga_mnist_mnist_accel_0_0.xci",
+        "inst_hier_path": "mnist_accel_0"
+      },
+      "lmb_bram_if_cntlr_0": {
+        "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
+        "ip_revision": "25",
+        "xci_name": "fpga_mnist_lmb_bram_if_cntlr_0_0",
+        "xci_path": "ip\\fpga_mnist_lmb_bram_if_cntlr_0_0\\fpga_mnist_lmb_bram_if_cntlr_0_0.xci",
+        "inst_hier_path": "lmb_bram_if_cntlr_0",
+        "hdl_attributes": {
+          "BMM_INFO_ADDRESS_SPACE": {
+            "value": "byte  0x00000000 32 > fpga_mnist blk_mem_gen_0",
+            "value_src": "default"
+          },
+          "KEEP_HIERARCHY": {
+            "value": "yes",
+            "value_src": "default"
+          }
+        }
+      },
+      "lmb_bram_if_cntlr_1": {
+        "vlnv": "xilinx.com:ip:lmb_bram_if_cntlr:4.0",
+        "ip_revision": "25",
+        "xci_name": "fpga_mnist_lmb_bram_if_cntlr_1_0",
+        "xci_path": "ip\\fpga_mnist_lmb_bram_if_cntlr_1_0\\fpga_mnist_lmb_bram_if_cntlr_1_0.xci",
+        "inst_hier_path": "lmb_bram_if_cntlr_1",
+        "hdl_attributes": {
+          "BMM_INFO_ADDRESS_SPACE": {
+            "value": "byte  0x00000000 32 > fpga_mnist blk_mem_gen_1",
+            "value_src": "default"
+          },
+          "KEEP_HIERARCHY": {
+            "value": "yes",
+            "value_src": "default"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "ip_revision": "15",
+        "xci_name": "fpga_mnist_clk_wiz_0_0",
+        "xci_path": "ip\\fpga_mnist_clk_wiz_0_0\\fpga_mnist_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "ip_revision": "16",
+        "xci_name": "fpga_mnist_proc_sys_reset_0_0",
+        "xci_path": "ip\\fpga_mnist_proc_sys_reset_0_0\\fpga_mnist_proc_sys_reset_0_0.xci",
+        "inst_hier_path": "proc_sys_reset_0"
+      },
+      "axi_smc": {
+        "vlnv": "xilinx.com:ip:smartconnect:1.0",
+        "ip_revision": "25",
+        "xci_name": "fpga_mnist_axi_smc_0",
+        "xci_path": "ip\\fpga_mnist_axi_smc_0\\fpga_mnist_axi_smc_0.xci",
+        "inst_hier_path": "axi_smc",
+        "parameters": {
+          "NUM_MI": {
+            "value": "2"
+          },
+          "NUM_SI": {
+            "value": "1"
+          }
+        },
+        "interface_ports": {
+          "S00_AXI": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              }
+            },
+            "bridges": [
+              "M00_AXI",
+              "M01_AXI"
+            ]
+          },
+          "M00_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          },
+          "M01_AXI": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:aximm:1.0",
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "parameters": {
+              "NUM_READ_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_READ_THREADS": {
+                "value": "1"
+              },
+              "NUM_WRITE_OUTSTANDING": {
+                "value": "1"
+              },
+              "NUM_WRITE_THREADS": {
+                "value": "1"
+              },
+              "RUSER_BITS_PER_BYTE": {
+                "value": "0"
+              },
+              "WUSER_BITS_PER_BYTE": {
+                "value": "0"
+              }
+            }
+          }
+        }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "fpga_mnist_blk_mem_gen_0_0",
+        "xci_path": "ip\\fpga_mnist_blk_mem_gen_0_0\\fpga_mnist_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0"
+      },
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "ip_revision": "9",
+        "xci_name": "fpga_mnist_blk_mem_gen_1_0",
+        "xci_path": "ip\\fpga_mnist_blk_mem_gen_1_0\\fpga_mnist_blk_mem_gen_1_0.xci",
+        "inst_hier_path": "blk_mem_gen_1"
+      }
+    },
+    "interface_nets": {
+      "axi_smc_M00_AXI": {
+        "interface_ports": [
+          "axi_smc/M00_AXI",
+          "axi_uartlite_0/S_AXI"
+        ]
+      },
+      "axi_smc_M01_AXI": {
+        "interface_ports": [
+          "axi_smc/M01_AXI",
+          "mnist_accel_0/S_AXI"
+        ]
+      },
+      "axi_uartlite_0_UART": {
+        "interface_ports": [
+          "usb_uart",
+          "axi_uartlite_0/UART"
+        ]
+      },
+      "lmb_bram_if_cntlr_0_BRAM_PORT": {
+        "interface_ports": [
+          "lmb_bram_if_cntlr_0/BRAM_PORT",
+          "blk_mem_gen_0/BRAM_PORTA"
+        ]
+      },
+      "lmb_bram_if_cntlr_1_BRAM_PORT": {
+        "interface_ports": [
+          "lmb_bram_if_cntlr_1/BRAM_PORT",
+          "blk_mem_gen_1/BRAM_PORTA"
+        ]
+      },
+      "microblaze_0_DLMB": {
+        "interface_ports": [
+          "microblaze_0/DLMB",
+          "lmb_bram_if_cntlr_1/SLMB"
+        ]
+      },
+      "microblaze_0_ILMB": {
+        "interface_ports": [
+          "lmb_bram_if_cntlr_0/SLMB",
+          "microblaze_0/ILMB"
+        ]
+      },
+      "microblaze_0_M_AXI_DP": {
+        "interface_ports": [
+          "microblaze_0/M_AXI_DP",
+          "axi_smc/S00_AXI"
+        ]
+      }
+    },
+    "nets": {
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "microblaze_0/Clk",
+          "axi_smc/aclk",
+          "proc_sys_reset_0/slowest_sync_clk",
+          "axi_uartlite_0/s_axi_aclk",
+          "lmb_bram_if_cntlr_0/LMB_Clk",
+          "lmb_bram_if_cntlr_1/LMB_Clk",
+          "mnist_accel_0/s_axi_aclk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "proc_sys_reset_0/dcm_locked"
+        ]
+      },
+      "mnist_accel_0_anode": {
+        "ports": [
+          "mnist_accel_0/anode",
+          "Anode"
+        ]
+      },
+      "mnist_accel_0_hex0": {
+        "ports": [
+          "mnist_accel_0/hex0",
+          "seven_segment_display"
+        ]
+      },
+      "proc_sys_reset_0_mb_reset": {
+        "ports": [
+          "proc_sys_reset_0/mb_reset",
+          "microblaze_0/Reset",
+          "clk_wiz_0/reset",
+          "lmb_bram_if_cntlr_0/LMB_Rst",
+          "lmb_bram_if_cntlr_1/LMB_Rst"
+        ]
+      },
+      "proc_sys_reset_0_peripheral_aresetn": {
+        "ports": [
+          "proc_sys_reset_0/peripheral_aresetn",
+          "axi_uartlite_0/s_axi_aresetn",
+          "axi_smc/aresetn",
+          "mnist_accel_0/s_axi_aresetn"
+        ]
+      },
+      "rst_button_1": {
+        "ports": [
+          "rst_button",
+          "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "sys_clock_1": {
+        "ports": [
+          "sys_clock",
+          "clk_wiz_0/clk_in1"
+        ]
+      }
+    },
+    "addressing": {
+      "/microblaze_0": {
+        "address_spaces": {
+          "Data": {
+            "segments": {
+              "SEG_axi_uartlite_0_Reg": {
+                "address_block": "/axi_uartlite_0/S_AXI/Reg",
+                "offset": "0x40600000",
+                "range": "64K"
+              },
+              "SEG_lmb_bram_if_cntlr_1_Mem": {
+                "address_block": "/lmb_bram_if_cntlr_1/SLMB/Mem",
+                "offset": "0x00000000",
+                "range": "8K",
+                "offset_high_param": "C_HIGHADDR"
+              },
+              "SEG_mnist_accel_0_S_AXI_reg": {
+                "address_block": "/mnist_accel_0/S_AXI/S_AXI_reg",
+                "offset": "0x44A00000",
+                "range": "64K",
+                "offset_base_param": "C_S_AXI_BASEADDR",
+                "offset_high_param": "C_S_AXI_HIGHADDR"
+              }
+            }
+          },
+          "Instruction": {
+            "segments": {
+              "SEG_lmb_bram_if_cntlr_0_Mem": {
+                "address_block": "/lmb_bram_if_cntlr_0/SLMB/Mem",
+                "offset": "0x00000000",
+                "range": "8K",
+                "offset_high_param": "C_HIGHADDR"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
