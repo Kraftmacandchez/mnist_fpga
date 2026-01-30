@@ -36,4 +36,7 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fpga_mnist_
 # IP: bd/fpga_mnist/ip/fpga_mnist_blk_mem_gen_1_0/fpga_mnist_blk_mem_gen_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fpga_mnist_blk_mem_gen_1_0 || ORIG_REF_NAME==fpga_mnist_blk_mem_gen_1_0} -quiet] -quiet
 
+# IP: bd/fpga_mnist/ip/fpga_mnist_mdm_0_0/fpga_mnist_mdm_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==fpga_mnist_mdm_0_0 || ORIG_REF_NAME==fpga_mnist_mdm_0_0} -quiet] -quiet
+
 # XDC: c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/fpga_mnist_ooc.xdc

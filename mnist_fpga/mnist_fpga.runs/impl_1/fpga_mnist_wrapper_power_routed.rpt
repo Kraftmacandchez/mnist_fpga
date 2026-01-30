@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date             : Wed Jan  7 13:48:27 2026
+| Date             : Mon Jan 12 11:44:24 2026
 | Host             : DESKTOP-6GKB5CJ running 64-bit major release  (build 9200)
 | Command          : report_power -file fpga_mnist_wrapper_power_routed.rpt -pb fpga_mnist_wrapper_power_summary_routed.pb -rpx fpga_mnist_wrapper_power_routed.rpx
 | Design           : fpga_mnist_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.198        |
+| Total On-Chip Power (W)  | 0.196        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.126        |
+| Dynamic (W)              | 0.124        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.0         |
@@ -52,21 +52,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.009 |        5 |       --- |             --- |
-| Slice Logic              |     0.005 |     4775 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     1482 |     20800 |            7.13 |
+| Clocks                   |     0.010 |        7 |       --- |             --- |
+| Slice Logic              |     0.003 |     5391 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1669 |     20800 |            8.02 |
 |   LUT as Distributed RAM |    <0.001 |       64 |      9600 |            0.67 |
-|   Register               |    <0.001 |     1940 |     41600 |            4.66 |
-|   CARRY4                 |    <0.001 |       65 |      8150 |            0.80 |
+|   Register               |    <0.001 |     2269 |     41600 |            5.45 |
+|   CARRY4                 |    <0.001 |       68 |      8150 |            0.83 |
 |   F7/F8 Muxes            |    <0.001 |      109 |     32600 |            0.33 |
-|   LUT as Shift Register  |    <0.001 |       53 |      9600 |            0.55 |
-|   Others                 |    <0.001 |      567 |       --- |             --- |
-| Signals                  |     0.005 |     3372 |       --- |             --- |
-| Block RAM                |    <0.001 |        4 |        50 |            8.00 |
+|   LUT as Shift Register  |    <0.001 |       75 |      9600 |            0.78 |
+|   Others                 |    <0.001 |      609 |       --- |             --- |
+| Signals                  |     0.004 |     3855 |       --- |             --- |
+| Block RAM                |     0.001 |        4 |        50 |            8.00 |
 | MMCM                     |     0.106 |        1 |         5 |           20.00 |
 | I/O                      |    <0.001 |       12 |       106 |           11.32 |
 | Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.198 |          |           |                 |
+| Total                    |     0.196 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.030 |       0.020 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.028 |       0.018 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -129,13 +129,15 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+---------------------------------+-------------------------------------------------------------+-----------------+
-| Clock                           | Domain                                                      | Constraint (ns) |
-+---------------------------------+-------------------------------------------------------------+-----------------+
-| clk_out1_fpga_mnist_clk_wiz_0_0 | fpga_mnist_i/clk_wiz_0/inst/clk_out1_fpga_mnist_clk_wiz_0_0 |            10.0 |
-| clkfbout_fpga_mnist_clk_wiz_0_0 | fpga_mnist_i/clk_wiz_0/inst/clkfbout_fpga_mnist_clk_wiz_0_0 |            10.0 |
-| sys_clock                       | sys_clock                                                   |            10.0 |
-+---------------------------------+-------------------------------------------------------------+-----------------+
++--------------------------------------------------------------+-------------------------------------------------------------+-----------------+
+| Clock                                                        | Domain                                                      | Constraint (ns) |
++--------------------------------------------------------------+-------------------------------------------------------------+-----------------+
+| clk_out1_fpga_mnist_clk_wiz_0_0                              | fpga_mnist_i/clk_wiz_0/inst/clk_out1_fpga_mnist_clk_wiz_0_0 |            10.0 |
+| clkfbout_fpga_mnist_clk_wiz_0_0                              | fpga_mnist_i/clk_wiz_0/inst/clkfbout_fpga_mnist_clk_wiz_0_0 |            10.0 |
+| fpga_mnist_i/mdm_0/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/DRCK   | fpga_mnist_i/mdm_0/U0/Use_E2.BSCAN_I/DRCK                   |            33.3 |
+| fpga_mnist_i/mdm_0/U0/Use_E2.BSCAN_I/Use_E2.BSCANE2_I/UPDATE | fpga_mnist_i/mdm_0/U0/Use_E2.BSCAN_I/Dbg_Update_0           |            33.3 |
+| sys_clock                                                    | sys_clock                                                   |            10.0 |
++--------------------------------------------------------------+-------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -147,14 +149,16 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| fpga_mnist_wrapper |     0.126 |
-|   fpga_mnist_i     |     0.126 |
-|     axi_smc        |     0.003 |
-|       inst         |     0.003 |
+| fpga_mnist_wrapper |     0.124 |
+|   fpga_mnist_i     |     0.124 |
+|     axi_smc        |     0.002 |
+|       inst         |     0.002 |
+|     blk_mem_gen_0  |     0.001 |
+|       U0           |     0.001 |
 |     clk_wiz_0      |     0.106 |
 |       inst         |     0.106 |
-|     microblaze_0   |     0.011 |
-|       U0           |     0.011 |
+|     microblaze_0   |     0.008 |
+|       U0           |     0.008 |
 |     mnist_accel_0  |     0.004 |
 |       inst         |     0.004 |
 +--------------------+-----------+

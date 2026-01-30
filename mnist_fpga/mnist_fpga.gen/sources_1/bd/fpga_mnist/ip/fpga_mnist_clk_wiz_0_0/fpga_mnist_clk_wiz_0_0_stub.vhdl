@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
--- Date        : Wed Jan  7 12:50:22 2026
+-- Date        : Mon Jan 12 13:36:36 2026
 -- Host        : DESKTOP-6GKB5CJ running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_clk_wiz_0_0/fpga_mnist_clk_wiz_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top fpga_mnist_clk_wiz_0_0 -prefix
+--               fpga_mnist_clk_wiz_0_0_ fpga_mnist_clk_wiz_0_0_stub.vhdl
 -- Design      : fpga_mnist_clk_wiz_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

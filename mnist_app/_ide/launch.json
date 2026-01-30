@@ -1,37 +1,37 @@
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "type": "tcf-debug",
-      "request": "launch",
-      "name": "mnist_app_app_hw_1",
-      "debugType": "baremetal-fpga",
-      "attachToRunningTargetOptions": {
-        "targetSetupMode": "standalone",
-        "executeScript": true,
-        "scriptPath": ""
-      },
-      "autoAttachProcessChildren": false,
-      "target": {
-        "targetConnectionId": "Local",
-        "peersIniPath": "../../_ide/.peers.ini",
-        "context": "fpga"
-      },
-      "pathMap": [],
-      "targetSetup": {
-        "resetSystem": true,
-        "programDevice": true,
-        "bitstreamFile": "${workspaceFolder}\\mnist_app\\_ide\\bitstream\\fpga_mnist_wrapper.bit",
-        "downloadElf": [
-          {
-            "core": "microblaze_0",
-            "resetProcessor": true,
-            "elfFile": "${workspaceFolder}\\mnist_app\\build\\mnist_app.elf",
-            "stopAtEntry": false
-          }
-        ]
-      },
-      "internalConsoleOptions": "openOnSessionStart"
-    }
-  ]
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "tcf-debug",
+			"request": "launch",
+			"name": "mnist_app_app_hw_1",
+			"debugType": "baremetal-fpga",
+			"attachToRunningTargetOptions": {
+				"targetSetupMode": "standalone",
+				"executeScript": true,
+				"scriptPath": ""
+			},
+			"autoAttachProcessChildren": false,
+			"target": {
+				"targetConnectionId": "Local",
+				"peersIniPath": "../../_ide/.peers.ini",
+				"context": "fpga"
+			},
+			"pathMap": [],
+			"targetSetup": {
+				"resetSystem": true,
+				"programDevice": true,
+				"bitstreamFile": "C:\\vitis_mnist\\clean_build\\clean_build.runs\\impl_1\\fpga_mnist_wrapper.bit",
+				"downloadElf": [
+					{
+						"core": "microblaze_0",
+						"resetProcessor": true,
+						"elfFile": "${workspaceFolder}\\mnist_app\\build\\mnist_app.elf",
+						"stopAtEntry": false
+					}
+				]
+			},
+			"internalConsoleOptions": "openOnSessionStart"
+		}
+	]
 }

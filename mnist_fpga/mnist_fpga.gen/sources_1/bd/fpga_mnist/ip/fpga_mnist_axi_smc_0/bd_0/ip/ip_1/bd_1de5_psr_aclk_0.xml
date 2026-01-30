@@ -398,11 +398,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 07 18:44:08 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 17:24:53 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:35956533</spirit:value>
+            <spirit:value>9:1d37485f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -413,7 +413,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:35956533</spirit:value>
+            <spirit:value>9:1d37485f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -432,11 +432,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 07 17:49:05 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 02:49:33 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:36de08ae</spirit:value>
+            <spirit:value>9:c21b7577</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -452,11 +452,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 07 18:44:08 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 17:24:53 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:36de08ae</spirit:value>
+            <spirit:value>9:c21b7577</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -475,11 +475,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 07 18:44:08 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 17:24:53 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:35956533</spirit:value>
+            <spirit:value>9:1d37485f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -495,11 +495,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Jan 07 18:44:08 UTC 2026</spirit:value>
+            <spirit:value>Fri Jan 30 17:24:53 UTC 2026</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:35956533</spirit:value>
+            <spirit:value>9:1d37485f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -744,7 +744,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../../ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd</spirit:name>
+        <spirit:name>../../../../../../../../../mnist_fpga.srcs/sources_1/bd/fpga_mnist/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>lib_cdc_v1_0_3</spirit:logicalName>
@@ -760,7 +760,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../../ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd</spirit:name>
+        <spirit:name>../../../../../../../../../mnist_fpga.srcs/sources_1/bd/fpga_mnist/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:logicalName>proc_sys_reset_v5_0_16</spirit:logicalName>
@@ -777,7 +777,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_xilinx_com_ip_lib_cdc_1_0__ref_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../../ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd</spirit:name>
+        <spirit:name>../../../../../../../../../mnist_fpga.srcs/sources_1/bd/fpga_mnist/ipshared/2a4f/hdl/lib_cdc_v1_0_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>lib_cdc_v1_0_3</spirit:logicalName>
       </spirit:file>
@@ -792,7 +792,7 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../../../../ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd</spirit:name>
+        <spirit:name>../../../../../../../../../mnist_fpga.srcs/sources_1/bd/fpga_mnist/ipshared/0831/hdl/proc_sys_reset_v5_0_vh_rfs.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>proc_sys_reset_v5_0_16</spirit:logicalName>
       </spirit:file>

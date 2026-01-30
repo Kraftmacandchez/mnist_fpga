@@ -2,7 +2,7 @@
 //Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-//Date        : Wed Jan  7 13:44:06 2026
+//Date        : Fri Jan 30 12:24:50 2026
 //Host        : DESKTOP-6GKB5CJ running 64-bit major release  (build 9200)
 //Command     : generate_target fpga_mnist.bd
 //Design      : fpga_mnist
@@ -10,26 +10,40 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "fpga_mnist,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=fpga_mnist,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=10,numReposBlks=10,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=2,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "fpga_mnist.hwdef" *) 
+(* CORE_GENERATION_INFO = "fpga_mnist,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=fpga_mnist,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_board_cnt=3,da_bram_cntlr_cnt=2,da_clkrst_cnt=2,da_mb_cnt=1,synth_mode=Hierarchical}" *) (* HW_HANDOFF = "fpga_mnist.hwdef" *) 
 module fpga_mnist
-   (Anode,
+   (anode,
     rst_button,
     seven_segment_display,
     sys_clock,
     usb_uart_rxd,
     usb_uart_txd);
-  output Anode;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST_BUTTON RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST_BUTTON, INSERT_VIP 0, POLARITY ACTIVE_LOW" *) input rst_button;
+  output [3:0]anode;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RST_BUTTON RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RST_BUTTON, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input rst_button;
   output [6:0]seven_segment_display;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN fpga_mnist_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0" *) input sys_clock;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 usb_uart RxD" *) (* X_INTERFACE_MODE = "Master" *) input usb_uart_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 usb_uart TxD" *) output usb_uart_txd;
 
-  wire Anode;
-  wire [3:0]axi_smc_M00_AXI_ARADDR;
+  wire [3:0]anode;
+  wire [12:0]axi_bram_ctrl_0_BRAM_PORTA_ADDR;
+  wire axi_bram_ctrl_0_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DIN;
+  wire [31:0]axi_bram_ctrl_0_BRAM_PORTA_DOUT;
+  wire axi_bram_ctrl_0_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_0_BRAM_PORTA_RST;
+  wire [3:0]axi_bram_ctrl_0_BRAM_PORTA_WE;
+  wire [12:0]axi_bram_ctrl_1_BRAM_PORTA_ADDR;
+  wire axi_bram_ctrl_1_BRAM_PORTA_CLK;
+  wire [31:0]axi_bram_ctrl_1_BRAM_PORTA_DIN;
+  wire [31:0]axi_bram_ctrl_1_BRAM_PORTA_DOUT;
+  wire axi_bram_ctrl_1_BRAM_PORTA_EN;
+  wire axi_bram_ctrl_1_BRAM_PORTA_RST;
+  wire [3:0]axi_bram_ctrl_1_BRAM_PORTA_WE;
+  wire [12:0]axi_smc_M00_AXI_ARADDR;
   wire axi_smc_M00_AXI_ARREADY;
   wire axi_smc_M00_AXI_ARVALID;
-  wire [3:0]axi_smc_M00_AXI_AWADDR;
+  wire [12:0]axi_smc_M00_AXI_AWADDR;
   wire axi_smc_M00_AXI_AWREADY;
   wire axi_smc_M00_AXI_AWVALID;
   wire axi_smc_M00_AXI_BREADY;
@@ -43,11 +57,11 @@ module fpga_mnist
   wire axi_smc_M00_AXI_WREADY;
   wire [3:0]axi_smc_M00_AXI_WSTRB;
   wire axi_smc_M00_AXI_WVALID;
-  wire [3:0]axi_smc_M01_AXI_ARADDR;
+  wire [8:0]axi_smc_M01_AXI_ARADDR;
   wire [2:0]axi_smc_M01_AXI_ARPROT;
   wire axi_smc_M01_AXI_ARREADY;
   wire axi_smc_M01_AXI_ARVALID;
-  wire [3:0]axi_smc_M01_AXI_AWADDR;
+  wire [8:0]axi_smc_M01_AXI_AWADDR;
   wire [2:0]axi_smc_M01_AXI_AWPROT;
   wire axi_smc_M01_AXI_AWREADY;
   wire axi_smc_M01_AXI_AWVALID;
@@ -62,41 +76,79 @@ module fpga_mnist
   wire axi_smc_M01_AXI_WREADY;
   wire [3:0]axi_smc_M01_AXI_WSTRB;
   wire axi_smc_M01_AXI_WVALID;
+  wire [12:0]axi_smc_M02_AXI_ARADDR;
+  wire [1:0]axi_smc_M02_AXI_ARBURST;
+  wire [3:0]axi_smc_M02_AXI_ARCACHE;
+  wire [7:0]axi_smc_M02_AXI_ARLEN;
+  wire [0:0]axi_smc_M02_AXI_ARLOCK;
+  wire [2:0]axi_smc_M02_AXI_ARPROT;
+  wire axi_smc_M02_AXI_ARREADY;
+  wire [2:0]axi_smc_M02_AXI_ARSIZE;
+  wire axi_smc_M02_AXI_ARVALID;
+  wire [12:0]axi_smc_M02_AXI_AWADDR;
+  wire [1:0]axi_smc_M02_AXI_AWBURST;
+  wire [3:0]axi_smc_M02_AXI_AWCACHE;
+  wire [7:0]axi_smc_M02_AXI_AWLEN;
+  wire [0:0]axi_smc_M02_AXI_AWLOCK;
+  wire [2:0]axi_smc_M02_AXI_AWPROT;
+  wire axi_smc_M02_AXI_AWREADY;
+  wire [2:0]axi_smc_M02_AXI_AWSIZE;
+  wire axi_smc_M02_AXI_AWVALID;
+  wire axi_smc_M02_AXI_BREADY;
+  wire [1:0]axi_smc_M02_AXI_BRESP;
+  wire axi_smc_M02_AXI_BVALID;
+  wire [31:0]axi_smc_M02_AXI_RDATA;
+  wire axi_smc_M02_AXI_RLAST;
+  wire axi_smc_M02_AXI_RREADY;
+  wire [1:0]axi_smc_M02_AXI_RRESP;
+  wire axi_smc_M02_AXI_RVALID;
+  wire [31:0]axi_smc_M02_AXI_WDATA;
+  wire axi_smc_M02_AXI_WLAST;
+  wire axi_smc_M02_AXI_WREADY;
+  wire [3:0]axi_smc_M02_AXI_WSTRB;
+  wire axi_smc_M02_AXI_WVALID;
+  wire [12:0]axi_smc_M03_AXI_ARADDR;
+  wire [1:0]axi_smc_M03_AXI_ARBURST;
+  wire [3:0]axi_smc_M03_AXI_ARCACHE;
+  wire [7:0]axi_smc_M03_AXI_ARLEN;
+  wire [0:0]axi_smc_M03_AXI_ARLOCK;
+  wire [2:0]axi_smc_M03_AXI_ARPROT;
+  wire axi_smc_M03_AXI_ARREADY;
+  wire [2:0]axi_smc_M03_AXI_ARSIZE;
+  wire axi_smc_M03_AXI_ARVALID;
+  wire [12:0]axi_smc_M03_AXI_AWADDR;
+  wire [1:0]axi_smc_M03_AXI_AWBURST;
+  wire [3:0]axi_smc_M03_AXI_AWCACHE;
+  wire [7:0]axi_smc_M03_AXI_AWLEN;
+  wire [0:0]axi_smc_M03_AXI_AWLOCK;
+  wire [2:0]axi_smc_M03_AXI_AWPROT;
+  wire axi_smc_M03_AXI_AWREADY;
+  wire [2:0]axi_smc_M03_AXI_AWSIZE;
+  wire axi_smc_M03_AXI_AWVALID;
+  wire axi_smc_M03_AXI_BREADY;
+  wire [1:0]axi_smc_M03_AXI_BRESP;
+  wire axi_smc_M03_AXI_BVALID;
+  wire [31:0]axi_smc_M03_AXI_RDATA;
+  wire axi_smc_M03_AXI_RLAST;
+  wire axi_smc_M03_AXI_RREADY;
+  wire [1:0]axi_smc_M03_AXI_RRESP;
+  wire axi_smc_M03_AXI_RVALID;
+  wire [31:0]axi_smc_M03_AXI_WDATA;
+  wire axi_smc_M03_AXI_WLAST;
+  wire axi_smc_M03_AXI_WREADY;
+  wire [3:0]axi_smc_M03_AXI_WSTRB;
+  wire axi_smc_M03_AXI_WVALID;
   wire clk_wiz_0_clk_out1;
   wire clk_wiz_0_locked;
-  wire [0:31]lmb_bram_if_cntlr_0_BRAM_PORT_ADDR;
-  wire lmb_bram_if_cntlr_0_BRAM_PORT_CLK;
-  wire [0:31]lmb_bram_if_cntlr_0_BRAM_PORT_DIN;
-  wire [31:0]lmb_bram_if_cntlr_0_BRAM_PORT_DOUT;
-  wire lmb_bram_if_cntlr_0_BRAM_PORT_EN;
-  wire lmb_bram_if_cntlr_0_BRAM_PORT_RST;
-  wire [0:3]lmb_bram_if_cntlr_0_BRAM_PORT_WE;
-  wire [0:31]lmb_bram_if_cntlr_1_BRAM_PORT_ADDR;
-  wire lmb_bram_if_cntlr_1_BRAM_PORT_CLK;
-  wire [0:31]lmb_bram_if_cntlr_1_BRAM_PORT_DIN;
-  wire [31:0]lmb_bram_if_cntlr_1_BRAM_PORT_DOUT;
-  wire lmb_bram_if_cntlr_1_BRAM_PORT_EN;
-  wire lmb_bram_if_cntlr_1_BRAM_PORT_RST;
-  wire [0:3]lmb_bram_if_cntlr_1_BRAM_PORT_WE;
-  wire [0:31]microblaze_0_DLMB_ABUS;
-  wire microblaze_0_DLMB_ADDRSTROBE;
-  wire [0:3]microblaze_0_DLMB_BE;
-  wire microblaze_0_DLMB_CE;
-  wire [0:31]microblaze_0_DLMB_READDBUS;
-  wire microblaze_0_DLMB_READSTROBE;
-  wire microblaze_0_DLMB_READY;
-  wire microblaze_0_DLMB_UE;
-  wire microblaze_0_DLMB_WAIT;
-  wire [0:31]microblaze_0_DLMB_WRITEDBUS;
-  wire microblaze_0_DLMB_WRITESTROBE;
-  wire [0:31]microblaze_0_ILMB_ABUS;
-  wire microblaze_0_ILMB_ADDRSTROBE;
-  wire microblaze_0_ILMB_CE;
-  wire [0:31]microblaze_0_ILMB_READDBUS;
-  wire microblaze_0_ILMB_READSTROBE;
-  wire microblaze_0_ILMB_READY;
-  wire microblaze_0_ILMB_UE;
-  wire microblaze_0_ILMB_WAIT;
+  wire mdm_0_MBDEBUG_0_CAPTURE;
+  wire mdm_0_MBDEBUG_0_CLK;
+  wire mdm_0_MBDEBUG_0_DISABLE;
+  wire [0:7]mdm_0_MBDEBUG_0_REG_EN;
+  wire mdm_0_MBDEBUG_0_RST;
+  wire mdm_0_MBDEBUG_0_SHIFT;
+  wire mdm_0_MBDEBUG_0_TDI;
+  wire mdm_0_MBDEBUG_0_TDO;
+  wire mdm_0_MBDEBUG_0_UPDATE;
   wire [31:0]microblaze_0_M_AXI_DP_ARADDR;
   wire [2:0]microblaze_0_M_AXI_DP_ARPROT;
   wire microblaze_0_M_AXI_DP_ARREADY;
@@ -116,6 +168,29 @@ module fpga_mnist
   wire microblaze_0_M_AXI_DP_WREADY;
   wire [3:0]microblaze_0_M_AXI_DP_WSTRB;
   wire microblaze_0_M_AXI_DP_WVALID;
+  wire [31:0]microblaze_0_M_AXI_IP_ARADDR;
+  wire [2:0]microblaze_0_M_AXI_IP_ARPROT;
+  wire microblaze_0_M_AXI_IP_ARREADY;
+  wire microblaze_0_M_AXI_IP_ARVALID;
+  wire [31:0]microblaze_0_M_AXI_IP_RDATA;
+  wire microblaze_0_M_AXI_IP_RREADY;
+  wire [1:0]microblaze_0_M_AXI_IP_RRESP;
+  wire microblaze_0_M_AXI_IP_RVALID;
+  wire mnist_accel_0_dbg_control_strobe;
+  wire mnist_accel_0_dbg_fc2_done;
+  wire mnist_accel_0_dbg_fsm_busy;
+  wire [15:0]mnist_accel_0_dbg_neuron_index;
+  wire [7:0]mnist_accel_0_dbg_pix_waddr;
+  wire [7:0]mnist_accel_0_dbg_pix_wr_index;
+  wire mnist_accel_0_dbg_pix_wr_strobe;
+  wire [7:0]mnist_accel_0_dbg_pix_write_addr;
+  wire mnist_accel_0_dbg_pix_write_en;
+  wire [31:0]mnist_accel_0_dbg_result_valid;
+  wire mnist_accel_0_dbg_run_done;
+  wire mnist_accel_0_dbg_start_fc2;
+  wire mnist_accel_0_dbg_start_latched;
+  wire mnist_accel_0_dbg_start_run_raw;
+  wire [2:0]mnist_accel_0_dbg_state;
   wire proc_sys_reset_0_mb_reset;
   wire [0:0]proc_sys_reset_0_peripheral_aresetn;
   wire rst_button;
@@ -124,6 +199,92 @@ module fpga_mnist
   wire usb_uart_rxd;
   wire usb_uart_txd;
 
+  (* BMM_INFO_ADDRESS_SPACE = "byte  0xC0000000 32 > fpga_mnist blk_mem_gen_0" *) 
+  (* KEEP_HIERARCHY = "yes" *) 
+  fpga_mnist_axi_bram_ctrl_0_0 axi_bram_ctrl_0
+       (.bram_addr_a(axi_bram_ctrl_0_BRAM_PORTA_ADDR),
+        .bram_clk_a(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .bram_en_a(axi_bram_ctrl_0_BRAM_PORTA_EN),
+        .bram_rddata_a(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_0_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_0_BRAM_PORTA_DIN),
+        .s_axi_aclk(clk_wiz_0_clk_out1),
+        .s_axi_araddr(axi_smc_M02_AXI_ARADDR),
+        .s_axi_arburst(axi_smc_M02_AXI_ARBURST),
+        .s_axi_arcache(axi_smc_M02_AXI_ARCACHE),
+        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .s_axi_arlen(axi_smc_M02_AXI_ARLEN),
+        .s_axi_arlock(axi_smc_M02_AXI_ARLOCK),
+        .s_axi_arprot(axi_smc_M02_AXI_ARPROT),
+        .s_axi_arready(axi_smc_M02_AXI_ARREADY),
+        .s_axi_arsize(axi_smc_M02_AXI_ARSIZE),
+        .s_axi_arvalid(axi_smc_M02_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M02_AXI_AWADDR),
+        .s_axi_awburst(axi_smc_M02_AXI_AWBURST),
+        .s_axi_awcache(axi_smc_M02_AXI_AWCACHE),
+        .s_axi_awlen(axi_smc_M02_AXI_AWLEN),
+        .s_axi_awlock(axi_smc_M02_AXI_AWLOCK),
+        .s_axi_awprot(axi_smc_M02_AXI_AWPROT),
+        .s_axi_awready(axi_smc_M02_AXI_AWREADY),
+        .s_axi_awsize(axi_smc_M02_AXI_AWSIZE),
+        .s_axi_awvalid(axi_smc_M02_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M02_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M02_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M02_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M02_AXI_RDATA),
+        .s_axi_rlast(axi_smc_M02_AXI_RLAST),
+        .s_axi_rready(axi_smc_M02_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M02_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M02_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M02_AXI_WDATA),
+        .s_axi_wlast(axi_smc_M02_AXI_WLAST),
+        .s_axi_wready(axi_smc_M02_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M02_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M02_AXI_WVALID));
+  (* BMM_INFO_ADDRESS_SPACE = "byte  0xC2000000 32 > fpga_mnist blk_mem_gen_1" *) 
+  (* KEEP_HIERARCHY = "yes" *) 
+  fpga_mnist_axi_bram_ctrl_1_0 axi_bram_ctrl_1
+       (.bram_addr_a(axi_bram_ctrl_1_BRAM_PORTA_ADDR),
+        .bram_clk_a(axi_bram_ctrl_1_BRAM_PORTA_CLK),
+        .bram_en_a(axi_bram_ctrl_1_BRAM_PORTA_EN),
+        .bram_rddata_a(axi_bram_ctrl_1_BRAM_PORTA_DOUT),
+        .bram_rst_a(axi_bram_ctrl_1_BRAM_PORTA_RST),
+        .bram_we_a(axi_bram_ctrl_1_BRAM_PORTA_WE),
+        .bram_wrdata_a(axi_bram_ctrl_1_BRAM_PORTA_DIN),
+        .s_axi_aclk(clk_wiz_0_clk_out1),
+        .s_axi_araddr(axi_smc_M03_AXI_ARADDR),
+        .s_axi_arburst(axi_smc_M03_AXI_ARBURST),
+        .s_axi_arcache(axi_smc_M03_AXI_ARCACHE),
+        .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
+        .s_axi_arlen(axi_smc_M03_AXI_ARLEN),
+        .s_axi_arlock(axi_smc_M03_AXI_ARLOCK),
+        .s_axi_arprot(axi_smc_M03_AXI_ARPROT),
+        .s_axi_arready(axi_smc_M03_AXI_ARREADY),
+        .s_axi_arsize(axi_smc_M03_AXI_ARSIZE),
+        .s_axi_arvalid(axi_smc_M03_AXI_ARVALID),
+        .s_axi_awaddr(axi_smc_M03_AXI_AWADDR),
+        .s_axi_awburst(axi_smc_M03_AXI_AWBURST),
+        .s_axi_awcache(axi_smc_M03_AXI_AWCACHE),
+        .s_axi_awlen(axi_smc_M03_AXI_AWLEN),
+        .s_axi_awlock(axi_smc_M03_AXI_AWLOCK),
+        .s_axi_awprot(axi_smc_M03_AXI_AWPROT),
+        .s_axi_awready(axi_smc_M03_AXI_AWREADY),
+        .s_axi_awsize(axi_smc_M03_AXI_AWSIZE),
+        .s_axi_awvalid(axi_smc_M03_AXI_AWVALID),
+        .s_axi_bready(axi_smc_M03_AXI_BREADY),
+        .s_axi_bresp(axi_smc_M03_AXI_BRESP),
+        .s_axi_bvalid(axi_smc_M03_AXI_BVALID),
+        .s_axi_rdata(axi_smc_M03_AXI_RDATA),
+        .s_axi_rlast(axi_smc_M03_AXI_RLAST),
+        .s_axi_rready(axi_smc_M03_AXI_RREADY),
+        .s_axi_rresp(axi_smc_M03_AXI_RRESP),
+        .s_axi_rvalid(axi_smc_M03_AXI_RVALID),
+        .s_axi_wdata(axi_smc_M03_AXI_WDATA),
+        .s_axi_wlast(axi_smc_M03_AXI_WLAST),
+        .s_axi_wready(axi_smc_M03_AXI_WREADY),
+        .s_axi_wstrb(axi_smc_M03_AXI_WSTRB),
+        .s_axi_wvalid(axi_smc_M03_AXI_WVALID));
   fpga_mnist_axi_smc_0 axi_smc
        (.M00_AXI_araddr(axi_smc_M00_AXI_ARADDR),
         .M00_AXI_arready(axi_smc_M00_AXI_ARREADY),
@@ -161,6 +322,68 @@ module fpga_mnist
         .M01_AXI_wready(axi_smc_M01_AXI_WREADY),
         .M01_AXI_wstrb(axi_smc_M01_AXI_WSTRB),
         .M01_AXI_wvalid(axi_smc_M01_AXI_WVALID),
+        .M02_AXI_araddr(axi_smc_M02_AXI_ARADDR),
+        .M02_AXI_arburst(axi_smc_M02_AXI_ARBURST),
+        .M02_AXI_arcache(axi_smc_M02_AXI_ARCACHE),
+        .M02_AXI_arlen(axi_smc_M02_AXI_ARLEN),
+        .M02_AXI_arlock(axi_smc_M02_AXI_ARLOCK),
+        .M02_AXI_arprot(axi_smc_M02_AXI_ARPROT),
+        .M02_AXI_arready(axi_smc_M02_AXI_ARREADY),
+        .M02_AXI_arsize(axi_smc_M02_AXI_ARSIZE),
+        .M02_AXI_arvalid(axi_smc_M02_AXI_ARVALID),
+        .M02_AXI_awaddr(axi_smc_M02_AXI_AWADDR),
+        .M02_AXI_awburst(axi_smc_M02_AXI_AWBURST),
+        .M02_AXI_awcache(axi_smc_M02_AXI_AWCACHE),
+        .M02_AXI_awlen(axi_smc_M02_AXI_AWLEN),
+        .M02_AXI_awlock(axi_smc_M02_AXI_AWLOCK),
+        .M02_AXI_awprot(axi_smc_M02_AXI_AWPROT),
+        .M02_AXI_awready(axi_smc_M02_AXI_AWREADY),
+        .M02_AXI_awsize(axi_smc_M02_AXI_AWSIZE),
+        .M02_AXI_awvalid(axi_smc_M02_AXI_AWVALID),
+        .M02_AXI_bready(axi_smc_M02_AXI_BREADY),
+        .M02_AXI_bresp(axi_smc_M02_AXI_BRESP),
+        .M02_AXI_bvalid(axi_smc_M02_AXI_BVALID),
+        .M02_AXI_rdata(axi_smc_M02_AXI_RDATA),
+        .M02_AXI_rlast(axi_smc_M02_AXI_RLAST),
+        .M02_AXI_rready(axi_smc_M02_AXI_RREADY),
+        .M02_AXI_rresp(axi_smc_M02_AXI_RRESP),
+        .M02_AXI_rvalid(axi_smc_M02_AXI_RVALID),
+        .M02_AXI_wdata(axi_smc_M02_AXI_WDATA),
+        .M02_AXI_wlast(axi_smc_M02_AXI_WLAST),
+        .M02_AXI_wready(axi_smc_M02_AXI_WREADY),
+        .M02_AXI_wstrb(axi_smc_M02_AXI_WSTRB),
+        .M02_AXI_wvalid(axi_smc_M02_AXI_WVALID),
+        .M03_AXI_araddr(axi_smc_M03_AXI_ARADDR),
+        .M03_AXI_arburst(axi_smc_M03_AXI_ARBURST),
+        .M03_AXI_arcache(axi_smc_M03_AXI_ARCACHE),
+        .M03_AXI_arlen(axi_smc_M03_AXI_ARLEN),
+        .M03_AXI_arlock(axi_smc_M03_AXI_ARLOCK),
+        .M03_AXI_arprot(axi_smc_M03_AXI_ARPROT),
+        .M03_AXI_arready(axi_smc_M03_AXI_ARREADY),
+        .M03_AXI_arsize(axi_smc_M03_AXI_ARSIZE),
+        .M03_AXI_arvalid(axi_smc_M03_AXI_ARVALID),
+        .M03_AXI_awaddr(axi_smc_M03_AXI_AWADDR),
+        .M03_AXI_awburst(axi_smc_M03_AXI_AWBURST),
+        .M03_AXI_awcache(axi_smc_M03_AXI_AWCACHE),
+        .M03_AXI_awlen(axi_smc_M03_AXI_AWLEN),
+        .M03_AXI_awlock(axi_smc_M03_AXI_AWLOCK),
+        .M03_AXI_awprot(axi_smc_M03_AXI_AWPROT),
+        .M03_AXI_awready(axi_smc_M03_AXI_AWREADY),
+        .M03_AXI_awsize(axi_smc_M03_AXI_AWSIZE),
+        .M03_AXI_awvalid(axi_smc_M03_AXI_AWVALID),
+        .M03_AXI_bready(axi_smc_M03_AXI_BREADY),
+        .M03_AXI_bresp(axi_smc_M03_AXI_BRESP),
+        .M03_AXI_bvalid(axi_smc_M03_AXI_BVALID),
+        .M03_AXI_rdata(axi_smc_M03_AXI_RDATA),
+        .M03_AXI_rlast(axi_smc_M03_AXI_RLAST),
+        .M03_AXI_rready(axi_smc_M03_AXI_RREADY),
+        .M03_AXI_rresp(axi_smc_M03_AXI_RRESP),
+        .M03_AXI_rvalid(axi_smc_M03_AXI_RVALID),
+        .M03_AXI_wdata(axi_smc_M03_AXI_WDATA),
+        .M03_AXI_wlast(axi_smc_M03_AXI_WLAST),
+        .M03_AXI_wready(axi_smc_M03_AXI_WREADY),
+        .M03_AXI_wstrb(axi_smc_M03_AXI_WSTRB),
+        .M03_AXI_wvalid(axi_smc_M03_AXI_WVALID),
         .S00_AXI_araddr(microblaze_0_M_AXI_DP_ARADDR),
         .S00_AXI_arprot(microblaze_0_M_AXI_DP_ARPROT),
         .S00_AXI_arready(microblaze_0_M_AXI_DP_ARREADY),
@@ -180,10 +403,22 @@ module fpga_mnist
         .S00_AXI_wready(microblaze_0_M_AXI_DP_WREADY),
         .S00_AXI_wstrb(microblaze_0_M_AXI_DP_WSTRB),
         .S00_AXI_wvalid(microblaze_0_M_AXI_DP_WVALID),
+        .S01_AXI_araddr(microblaze_0_M_AXI_IP_ARADDR),
+        .S01_AXI_arprot(microblaze_0_M_AXI_IP_ARPROT),
+        .S01_AXI_arready(microblaze_0_M_AXI_IP_ARREADY),
+        .S01_AXI_arvalid(microblaze_0_M_AXI_IP_ARVALID),
+        .S01_AXI_rdata(microblaze_0_M_AXI_IP_RDATA),
+        .S01_AXI_rready(microblaze_0_M_AXI_IP_RREADY),
+        .S01_AXI_rresp(microblaze_0_M_AXI_IP_RRESP),
+        .S01_AXI_rvalid(microblaze_0_M_AXI_IP_RVALID),
         .aclk(clk_wiz_0_clk_out1),
         .aresetn(proc_sys_reset_0_peripheral_aresetn));
-  fpga_mnist_axi_uartlite_0_0 axi_uartlite_0
-       (.rx(usb_uart_rxd),
+  fpga_mnist_axi_uart16550_0_1 axi_uart16550_0
+       (.ctsn(1'b1),
+        .dcdn(1'b1),
+        .dsrn(1'b1),
+        .freeze(1'b0),
+        .rin(1'b1),
         .s_axi_aclk(clk_wiz_0_clk_out1),
         .s_axi_araddr(axi_smc_M00_AXI_ARADDR),
         .s_axi_aresetn(proc_sys_reset_0_peripheral_aresetn),
@@ -203,103 +438,72 @@ module fpga_mnist
         .s_axi_wready(axi_smc_M00_AXI_WREADY),
         .s_axi_wstrb(axi_smc_M00_AXI_WSTRB),
         .s_axi_wvalid(axi_smc_M00_AXI_WVALID),
-        .tx(usb_uart_txd));
-  fpga_mnist_blk_mem_gen_0_0 blk_mem_gen_0
-       (.addra({lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[0],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[1],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[2],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[3],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[4],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[5],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[6],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[7],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[8],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[9],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[10],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[11],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[12],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[13],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[14],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[15],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[16],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[17],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[18],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[19],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[20],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[21],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[22],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[23],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[24],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[25],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[26],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[27],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[28],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[29],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[30],lmb_bram_if_cntlr_0_BRAM_PORT_ADDR[31]}),
-        .clka(lmb_bram_if_cntlr_0_BRAM_PORT_CLK),
-        .dina({lmb_bram_if_cntlr_0_BRAM_PORT_DIN[0],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[1],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[2],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[3],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[4],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[5],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[6],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[7],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[8],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[9],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[10],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[11],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[12],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[13],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[14],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[15],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[16],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[17],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[18],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[19],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[20],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[21],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[22],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[23],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[24],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[25],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[26],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[27],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[28],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[29],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[30],lmb_bram_if_cntlr_0_BRAM_PORT_DIN[31]}),
-        .douta(lmb_bram_if_cntlr_0_BRAM_PORT_DOUT),
-        .ena(lmb_bram_if_cntlr_0_BRAM_PORT_EN),
-        .rsta(lmb_bram_if_cntlr_0_BRAM_PORT_RST),
-        .wea({lmb_bram_if_cntlr_0_BRAM_PORT_WE[0],lmb_bram_if_cntlr_0_BRAM_PORT_WE[1],lmb_bram_if_cntlr_0_BRAM_PORT_WE[2],lmb_bram_if_cntlr_0_BRAM_PORT_WE[3]}));
+        .sin(usb_uart_rxd),
+        .sout(usb_uart_txd));
+  fpga_mnist_blk_mem_gen_0_4 blk_mem_gen_0
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_0_BRAM_PORTA_ADDR}),
+        .clka(axi_bram_ctrl_0_BRAM_PORTA_CLK),
+        .dina(axi_bram_ctrl_0_BRAM_PORTA_DIN),
+        .douta(axi_bram_ctrl_0_BRAM_PORTA_DOUT),
+        .ena(axi_bram_ctrl_0_BRAM_PORTA_EN),
+        .rsta(axi_bram_ctrl_0_BRAM_PORTA_RST),
+        .wea(axi_bram_ctrl_0_BRAM_PORTA_WE));
   fpga_mnist_blk_mem_gen_1_0 blk_mem_gen_1
-       (.addra({lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[0],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[1],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[2],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[3],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[4],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[5],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[6],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[7],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[8],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[9],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[10],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[11],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[12],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[13],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[14],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[15],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[16],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[17],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[18],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[19],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[20],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[21],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[22],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[23],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[24],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[25],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[26],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[27],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[28],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[29],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[30],lmb_bram_if_cntlr_1_BRAM_PORT_ADDR[31]}),
-        .clka(lmb_bram_if_cntlr_1_BRAM_PORT_CLK),
-        .dina({lmb_bram_if_cntlr_1_BRAM_PORT_DIN[0],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[1],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[2],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[3],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[4],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[5],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[6],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[7],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[8],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[9],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[10],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[11],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[12],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[13],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[14],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[15],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[16],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[17],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[18],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[19],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[20],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[21],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[22],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[23],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[24],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[25],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[26],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[27],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[28],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[29],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[30],lmb_bram_if_cntlr_1_BRAM_PORT_DIN[31]}),
-        .douta(lmb_bram_if_cntlr_1_BRAM_PORT_DOUT),
-        .ena(lmb_bram_if_cntlr_1_BRAM_PORT_EN),
-        .rsta(lmb_bram_if_cntlr_1_BRAM_PORT_RST),
-        .wea({lmb_bram_if_cntlr_1_BRAM_PORT_WE[0],lmb_bram_if_cntlr_1_BRAM_PORT_WE[1],lmb_bram_if_cntlr_1_BRAM_PORT_WE[2],lmb_bram_if_cntlr_1_BRAM_PORT_WE[3]}));
+       (.addra({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,axi_bram_ctrl_1_BRAM_PORTA_ADDR}),
+        .clka(axi_bram_ctrl_1_BRAM_PORTA_CLK),
+        .dina(axi_bram_ctrl_1_BRAM_PORTA_DIN),
+        .douta(axi_bram_ctrl_1_BRAM_PORTA_DOUT),
+        .ena(axi_bram_ctrl_1_BRAM_PORTA_EN),
+        .rsta(axi_bram_ctrl_1_BRAM_PORTA_RST),
+        .wea(axi_bram_ctrl_1_BRAM_PORTA_WE));
   fpga_mnist_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(sys_clock),
         .clk_out1(clk_wiz_0_clk_out1),
         .locked(clk_wiz_0_locked),
-        .reset(proc_sys_reset_0_mb_reset));
-  (* BMM_INFO_ADDRESS_SPACE = "byte  0x00000000 32 > fpga_mnist blk_mem_gen_0" *) 
-  (* KEEP_HIERARCHY = "yes" *) 
-  fpga_mnist_lmb_bram_if_cntlr_0_0 lmb_bram_if_cntlr_0
-       (.BRAM_Addr_A(lmb_bram_if_cntlr_0_BRAM_PORT_ADDR),
-        .BRAM_Clk_A(lmb_bram_if_cntlr_0_BRAM_PORT_CLK),
-        .BRAM_Din_A({lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[31],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[30],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[29],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[28],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[27],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[26],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[25],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[24],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[23],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[22],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[21],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[20],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[19],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[18],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[17],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[16],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[15],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[14],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[13],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[12],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[11],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[10],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[9],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[8],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[7],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[6],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[5],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[4],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[3],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[2],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[1],lmb_bram_if_cntlr_0_BRAM_PORT_DOUT[0]}),
-        .BRAM_Dout_A(lmb_bram_if_cntlr_0_BRAM_PORT_DIN),
-        .BRAM_EN_A(lmb_bram_if_cntlr_0_BRAM_PORT_EN),
-        .BRAM_Rst_A(lmb_bram_if_cntlr_0_BRAM_PORT_RST),
-        .BRAM_WEN_A(lmb_bram_if_cntlr_0_BRAM_PORT_WE),
-        .LMB_ABus(microblaze_0_ILMB_ABUS),
-        .LMB_AddrStrobe(microblaze_0_ILMB_ADDRSTROBE),
-        .LMB_BE({1'b0,1'b0,1'b0,1'b0}),
-        .LMB_Clk(clk_wiz_0_clk_out1),
-        .LMB_ReadStrobe(microblaze_0_ILMB_READSTROBE),
-        .LMB_Rst(proc_sys_reset_0_mb_reset),
-        .LMB_WriteDBus({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .LMB_WriteStrobe(1'b0),
-        .Sl_CE(microblaze_0_ILMB_CE),
-        .Sl_DBus(microblaze_0_ILMB_READDBUS),
-        .Sl_Ready(microblaze_0_ILMB_READY),
-        .Sl_UE(microblaze_0_ILMB_UE),
-        .Sl_Wait(microblaze_0_ILMB_WAIT));
-  (* BMM_INFO_ADDRESS_SPACE = "byte  0x00000000 32 > fpga_mnist blk_mem_gen_1" *) 
-  (* KEEP_HIERARCHY = "yes" *) 
-  fpga_mnist_lmb_bram_if_cntlr_1_0 lmb_bram_if_cntlr_1
-       (.BRAM_Addr_A(lmb_bram_if_cntlr_1_BRAM_PORT_ADDR),
-        .BRAM_Clk_A(lmb_bram_if_cntlr_1_BRAM_PORT_CLK),
-        .BRAM_Din_A({lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[31],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[30],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[29],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[28],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[27],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[26],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[25],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[24],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[23],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[22],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[21],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[20],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[19],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[18],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[17],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[16],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[15],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[14],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[13],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[12],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[11],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[10],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[9],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[8],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[7],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[6],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[5],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[4],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[3],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[2],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[1],lmb_bram_if_cntlr_1_BRAM_PORT_DOUT[0]}),
-        .BRAM_Dout_A(lmb_bram_if_cntlr_1_BRAM_PORT_DIN),
-        .BRAM_EN_A(lmb_bram_if_cntlr_1_BRAM_PORT_EN),
-        .BRAM_Rst_A(lmb_bram_if_cntlr_1_BRAM_PORT_RST),
-        .BRAM_WEN_A(lmb_bram_if_cntlr_1_BRAM_PORT_WE),
-        .LMB_ABus(microblaze_0_DLMB_ABUS),
-        .LMB_AddrStrobe(microblaze_0_DLMB_ADDRSTROBE),
-        .LMB_BE(microblaze_0_DLMB_BE),
-        .LMB_Clk(clk_wiz_0_clk_out1),
-        .LMB_ReadStrobe(microblaze_0_DLMB_READSTROBE),
-        .LMB_Rst(proc_sys_reset_0_mb_reset),
-        .LMB_WriteDBus(microblaze_0_DLMB_WRITEDBUS),
-        .LMB_WriteStrobe(microblaze_0_DLMB_WRITESTROBE),
-        .Sl_CE(microblaze_0_DLMB_CE),
-        .Sl_DBus(microblaze_0_DLMB_READDBUS),
-        .Sl_Ready(microblaze_0_DLMB_READY),
-        .Sl_UE(microblaze_0_DLMB_UE),
-        .Sl_Wait(microblaze_0_DLMB_WAIT));
-  (* BMM_INFO_PROCESSOR = "microblaze-le > fpga_mnist lmb_bram_if_cntlr_1 fpga_mnist lmb_bram_if_cntlr_0" *) 
+        .reset(1'b0));
+  fpga_mnist_ila_0_0 ila_0
+       (.clk(clk_wiz_0_clk_out1),
+        .probe0(mnist_accel_0_dbg_start_latched),
+        .probe1(mnist_accel_0_dbg_start_run_raw),
+        .probe10(mnist_accel_0_dbg_start_fc2),
+        .probe11(mnist_accel_0_dbg_fc2_done),
+        .probe12(proc_sys_reset_0_peripheral_aresetn),
+        .probe13(rst_button),
+        .probe14(clk_wiz_0_locked),
+        .probe15(mnist_accel_0_dbg_pix_waddr),
+        .probe16(mnist_accel_0_dbg_control_strobe),
+        .probe17(mnist_accel_0_dbg_pix_wr_strobe),
+        .probe2(mnist_accel_0_dbg_pix_write_en),
+        .probe3(mnist_accel_0_dbg_pix_write_addr),
+        .probe4(mnist_accel_0_dbg_pix_wr_index),
+        .probe5(mnist_accel_0_dbg_fsm_busy),
+        .probe6(mnist_accel_0_dbg_run_done),
+        .probe7(mnist_accel_0_dbg_state),
+        .probe8(mnist_accel_0_dbg_result_valid),
+        .probe9(mnist_accel_0_dbg_neuron_index));
+  fpga_mnist_mdm_0_0 mdm_0
+       (.Dbg_Capture_0(mdm_0_MBDEBUG_0_CAPTURE),
+        .Dbg_Clk_0(mdm_0_MBDEBUG_0_CLK),
+        .Dbg_Disable_0(mdm_0_MBDEBUG_0_DISABLE),
+        .Dbg_Reg_En_0(mdm_0_MBDEBUG_0_REG_EN),
+        .Dbg_Rst_0(mdm_0_MBDEBUG_0_RST),
+        .Dbg_Shift_0(mdm_0_MBDEBUG_0_SHIFT),
+        .Dbg_TDI_0(mdm_0_MBDEBUG_0_TDI),
+        .Dbg_TDO_0(mdm_0_MBDEBUG_0_TDO),
+        .Dbg_Update_0(mdm_0_MBDEBUG_0_UPDATE));
+  (* BMM_INFO_PROCESSOR = "microblaze-le > fpga_mnist axi_bram_ctrl_0 fpga_mnist axi_bram_ctrl_1" *) 
   (* KEEP_HIERARCHY = "yes" *) 
   fpga_mnist_microblaze_0_0 microblaze_0
-       (.Byte_Enable(microblaze_0_DLMB_BE),
-        .Clk(clk_wiz_0_clk_out1),
-        .DCE(microblaze_0_DLMB_CE),
-        .DReady(microblaze_0_DLMB_READY),
-        .DUE(microblaze_0_DLMB_UE),
-        .DWait(microblaze_0_DLMB_WAIT),
-        .D_AS(microblaze_0_DLMB_ADDRSTROBE),
-        .Data_Addr(microblaze_0_DLMB_ABUS),
-        .Data_Read(microblaze_0_DLMB_READDBUS),
-        .Data_Write(microblaze_0_DLMB_WRITEDBUS),
-        .Dbg_Capture(1'b0),
-        .Dbg_Clk(1'b0),
-        .Dbg_Disable(1'b0),
-        .Dbg_Reg_En({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
-        .Dbg_Shift(1'b0),
-        .Dbg_TDI(1'b0),
-        .Dbg_Update(1'b0),
-        .Debug_Rst(1'b0),
-        .ICE(microblaze_0_ILMB_CE),
-        .IFetch(microblaze_0_ILMB_READSTROBE),
-        .IReady(microblaze_0_ILMB_READY),
-        .IUE(microblaze_0_ILMB_UE),
-        .IWAIT(microblaze_0_ILMB_WAIT),
-        .I_AS(microblaze_0_ILMB_ADDRSTROBE),
-        .Instr(microblaze_0_ILMB_READDBUS),
-        .Instr_Addr(microblaze_0_ILMB_ABUS),
+       (.Clk(clk_wiz_0_clk_out1),
+        .Dbg_Capture(mdm_0_MBDEBUG_0_CAPTURE),
+        .Dbg_Clk(mdm_0_MBDEBUG_0_CLK),
+        .Dbg_Disable(mdm_0_MBDEBUG_0_DISABLE),
+        .Dbg_Reg_En(mdm_0_MBDEBUG_0_REG_EN),
+        .Dbg_Shift(mdm_0_MBDEBUG_0_SHIFT),
+        .Dbg_TDI(mdm_0_MBDEBUG_0_TDI),
+        .Dbg_TDO(mdm_0_MBDEBUG_0_TDO),
+        .Dbg_Update(mdm_0_MBDEBUG_0_UPDATE),
+        .Debug_Rst(mdm_0_MBDEBUG_0_RST),
         .Interrupt(1'b0),
         .Interrupt_Address({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .M_AXI_DP_ARADDR(microblaze_0_M_AXI_DP_ARADDR),
@@ -321,11 +525,36 @@ module fpga_mnist
         .M_AXI_DP_WREADY(microblaze_0_M_AXI_DP_WREADY),
         .M_AXI_DP_WSTRB(microblaze_0_M_AXI_DP_WSTRB),
         .M_AXI_DP_WVALID(microblaze_0_M_AXI_DP_WVALID),
-        .Read_Strobe(microblaze_0_DLMB_READSTROBE),
-        .Reset(proc_sys_reset_0_mb_reset),
-        .Write_Strobe(microblaze_0_DLMB_WRITESTROBE));
-  fpga_mnist_mnist_accel_0_0 mnist_accel_0
-       (.anode(Anode),
+        .M_AXI_IP_ARADDR(microblaze_0_M_AXI_IP_ARADDR),
+        .M_AXI_IP_ARPROT(microblaze_0_M_AXI_IP_ARPROT),
+        .M_AXI_IP_ARREADY(microblaze_0_M_AXI_IP_ARREADY),
+        .M_AXI_IP_ARVALID(microblaze_0_M_AXI_IP_ARVALID),
+        .M_AXI_IP_AWREADY(1'b0),
+        .M_AXI_IP_BRESP({1'b0,1'b0}),
+        .M_AXI_IP_BVALID(1'b0),
+        .M_AXI_IP_RDATA(microblaze_0_M_AXI_IP_RDATA),
+        .M_AXI_IP_RREADY(microblaze_0_M_AXI_IP_RREADY),
+        .M_AXI_IP_RRESP(microblaze_0_M_AXI_IP_RRESP),
+        .M_AXI_IP_RVALID(microblaze_0_M_AXI_IP_RVALID),
+        .M_AXI_IP_WREADY(1'b0),
+        .Reset(proc_sys_reset_0_mb_reset));
+  fpga_mnist_mnist_accel_0_2 mnist_accel_0
+       (.anode(anode),
+        .dbg_control_strobe(mnist_accel_0_dbg_control_strobe),
+        .dbg_fc2_done(mnist_accel_0_dbg_fc2_done),
+        .dbg_fsm_busy(mnist_accel_0_dbg_fsm_busy),
+        .dbg_neuron_index(mnist_accel_0_dbg_neuron_index),
+        .dbg_pix_waddr(mnist_accel_0_dbg_pix_waddr),
+        .dbg_pix_wr_index(mnist_accel_0_dbg_pix_wr_index),
+        .dbg_pix_wr_strobe(mnist_accel_0_dbg_pix_wr_strobe),
+        .dbg_pix_write_addr(mnist_accel_0_dbg_pix_write_addr),
+        .dbg_pix_write_en(mnist_accel_0_dbg_pix_write_en),
+        .dbg_result_valid(mnist_accel_0_dbg_result_valid),
+        .dbg_run_done(mnist_accel_0_dbg_run_done),
+        .dbg_start_fc2(mnist_accel_0_dbg_start_fc2),
+        .dbg_start_latched(mnist_accel_0_dbg_start_latched),
+        .dbg_start_run_raw(mnist_accel_0_dbg_start_run_raw),
+        .dbg_state(mnist_accel_0_dbg_state),
         .hex0(seven_segment_display),
         .s_axi_aclk(clk_wiz_0_clk_out1),
         .s_axi_araddr(axi_smc_M01_AXI_ARADDR),

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/vitis_mnist/clean_build/clean_build.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="10"></ZoomEndTime>
+      <Cursor1Time time="0"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="555"></NameColumnWidth>
+      <ValueColumnWidth column_width="139"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_start_latched" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_start_latched</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_start_latched</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_start_run_raw" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_start_run_raw</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_start_run_raw</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_pix_write_en" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_pix_write_en</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_pix_write_en</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_pix_write_addr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_pix_write_addr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_pix_write_addr[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_pix_wr_index" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_pix_wr_index[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_pix_wr_index[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_fsm_busy" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_fsm_busy</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_fsm_busy</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_run_done" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_run_done</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_run_done</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_state" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_state[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_result_valid" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_result_valid[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_result_valid[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_neuron_index" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_neuron_index[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_neuron_index[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_start_fc2" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_start_fc2</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_start_fc2</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_fc2_done" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_fc2_done</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_fc2_done</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/proc_sys_reset_0_peripheral_aresetn" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/proc_sys_reset_0_peripheral_aresetn</obj_property>
+      <obj_property name="ObjectShortName">proc_sys_reset_0_peripheral_aresetn</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/clk_wiz_0_locked" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/clk_wiz_0_locked</obj_property>
+      <obj_property name="ObjectShortName">clk_wiz_0_locked</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/rst_button" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/rst_button</obj_property>
+      <obj_property name="ObjectShortName">rst_button</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_pix_waddr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_pix_waddr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_pix_waddr[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="fpga_mnist_i/mnist_accel_0_dbg_result_valid" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">fpga_mnist_i/mnist_accel_0_dbg_result_valid[31:0]</obj_property>
+      <obj_property name="ObjectShortName">mnist_accel_0_dbg_result_valid[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

@@ -2,7 +2,7 @@
 // Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-// Date        : Wed Jan  7 12:50:38 2026
+// Date        : Mon Jan 12 11:40:40 2026
 // Host        : DESKTOP-6GKB5CJ running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ fpga_mnist_mnist_accel_0_0_stub.v
@@ -14,7 +14,7 @@
 // This empty module with port declaration file causes synthesis tools to infer a black box for IP.
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
-(* CHECK_LICENSE_TYPE = "fpga_mnist_mnist_accel_0_0,mnist_accel,{}" *) (* CORE_GENERATION_INFO = "fpga_mnist_mnist_accel_0_0,mnist_accel,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=mnist_accel,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=4}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
+(* CHECK_LICENSE_TYPE = "fpga_mnist_mnist_accel_0_0,mnist_accel,{}" *) (* CORE_GENERATION_INFO = "fpga_mnist_mnist_accel_0_0,mnist_accel,{x_ipProduct=Vivado 2024.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=mnist_accel,x_ipVersion=1.0,x_ipCoreRevision=7,x_ipLanguage=VERILOG,x_ipSimLanguage=VERILOG,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=4}" *) (* DowngradeIPIdentifiedWarnings = "yes" *) 
 (* X_CORE_INFO = "mnist_accel,Vivado 2024.2" *) 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(hex0, anode, s_axi_aclk, s_axi_aresetn, 
   s_axi_awaddr, s_axi_awprot, s_axi_awvalid, s_axi_awready, s_axi_wdata, s_axi_wstrb, 

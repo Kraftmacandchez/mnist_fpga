@@ -296,6 +296,15 @@ XILTIMER_tick_timer:STRING=None
 YOCTO:BOOL=OFF
 
 //Value Computed by CMake
+bram_BINARY_DIR:STATIC=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/bram/src
+
+//Value Computed by CMake
+bram_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+bram_SOURCE_DIR:STATIC=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/bram/src
+
+//Value Computed by CMake
 bsp_BINARY_DIR:STATIC=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp
 
 //Value Computed by CMake
@@ -360,10 +369,10 @@ standalone_profile_timer:STRING=None
 standalone_sleep_timer:STRING=None
 
 //stdin peripheral
-standalone_stdin:STRING=axi_uartlite_0
+standalone_stdin:STRING=axi_uart16550_0
 
 //stdout peripheral
-standalone_stdout:STRING=axi_uartlite_0
+standalone_stdout:STRING=axi_uart16550_0
 
 //Deprecated in favor of xiltimer
 standalone_ttc_select_cntr:STRING=None
@@ -373,13 +382,13 @@ standalone_ttc_select_cntr:STRING=None
 standalone_xpm_support:STRING=None
 
 //Value Computed by CMake
-uartlite_BINARY_DIR:STATIC=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartlite/src
+uartns550_BINARY_DIR:STATIC=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartns550/src
 
 //Value Computed by CMake
-uartlite_IS_TOP_LEVEL:STATIC=OFF
+uartns550_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-uartlite_SOURCE_DIR:STATIC=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src
+uartns550_SOURCE_DIR:STATIC=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src
 
 //Value Computed by CMake
 xilstandalone_BINARY_DIR:STATIC=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/standalone/src
@@ -509,7 +518,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -565,9 +574,9 @@ standalone_profile_timer-STRINGS:INTERNAL=None
 //STRINGS property for variable: standalone_sleep_timer
 standalone_sleep_timer-STRINGS:INTERNAL=None
 //STRINGS property for variable: standalone_stdin
-standalone_stdin-STRINGS:INTERNAL=None;axi_uartlite_0
+standalone_stdin-STRINGS:INTERNAL=None;axi_uart16550_0
 //STRINGS property for variable: standalone_stdout
-standalone_stdout-STRINGS:INTERNAL=None;axi_uartlite_0
+standalone_stdout-STRINGS:INTERNAL=None;axi_uart16550_0
 //STRINGS property for variable: standalone_ttc_select_cntr
 standalone_ttc_select_cntr-STRINGS:INTERNAL=None
 //STRINGS property for variable: standalone_xpm_support

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1767811632">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1768236159">
   <File Type="PA-TCL" Name="fpga_mnist_wrapper.tcl"/>
   <File Type="REPORTS-TCL" Name="fpga_mnist_wrapper_reports.tcl"/>
   <File Type="INIT-TIMING" Name="fpga_mnist_wrapper_timing_summary_init.rpt"/>
@@ -146,13 +146,5 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_blk_mem_gen_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_blk_mem_gen_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_proc_sys_reset_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_axi_uartlite_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_microblaze_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_lmb_bram_if_cntlr_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_mnist_accel_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="fpga_mnist_lmb_bram_if_cntlr_0_0"/>
 </GenRun>

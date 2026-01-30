@@ -106,6 +106,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 4
+  set_param bd.open.in_stealth_mode 1
   set_param runs.launchOptions { -jobs 8  }
   open_checkpoint fpga_mnist_wrapper_routed.dcp
   set_property webtalk.parent_dir C:/vitis_mnist/mnist_fpga/mnist_fpga.cache/wt [current_project]

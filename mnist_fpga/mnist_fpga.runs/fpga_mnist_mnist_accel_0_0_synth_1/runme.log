@@ -8,7 +8,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:35:27 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Wed Jan  7 12:49:24 2026
+  **** Start of session at: Mon Jan 12 11:39:48 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -24,77 +24,77 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17148
+INFO: [Synth 8-7075] Helper process launched with PID 59140
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1036.539 ; gain = 465.605
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1035.625 ; gain = 465.996
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6901] identifier 'axi_wready' is used before its declaration [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:107]
-WARNING: [Synth 8-6901] identifier 'axi_awready' is used before its declaration [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:107]
+WARNING: [Synth 8-6901] identifier 'axi_wready' is used before its declaration [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:107]
+WARNING: [Synth 8-6901] identifier 'axi_awready' is used before its declaration [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:107]
 INFO: [Synth 8-6157] synthesizing module 'fpga_mnist_mnist_accel_0_0' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_mnist_accel_0_0/synth/fpga_mnist_mnist_accel_0_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'mnist_accel' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel.v:4]
-INFO: [Synth 8-6157] synthesizing module 'mnist_accel_slave_lite_v1_0_S_AXI' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:4]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:171]
-INFO: [Synth 8-226] default block is never used [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:245]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:298]
-INFO: [Synth 8-226] default block is never used [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:391]
-INFO: [Synth 8-6157] synthesizing module 'mnist_fpga_accel' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_fpga_accel.v:8]
-INFO: [Synth 8-6157] synthesizing module 'pixel_buffer' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'pixel_buffer' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:14]
-INFO: [Synth 8-6157] synthesizing module 'weight_bram' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:6]
-INFO: [Synth 8-251] Loading FC2 weight file: ../../bram_init/weights.mem [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:21]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../bram_init/weights.mem'; please make sure the file is added to project and has read permission, ignoring [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'weight_bram' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:6]
-INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized0' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:6]
-INFO: [Synth 8-251] Loading FC2 weight file: ../../bram_init/fc2_weights.mem [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:21]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../bram_init/fc2_weights.mem'; please make sure the file is added to project and has read permission, ignoring [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized0' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:6]
-INFO: [Synth 8-6157] synthesizing module 'bias_bram' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:6]
-INFO: [Synth 8-251] Loading FC2 bias file: ../../bram_init/biases.mem [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:20]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../bram_init/biases.mem'; please make sure the file is added to project and has read permission, ignoring [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'bias_bram' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:6]
-INFO: [Synth 8-6157] synthesizing module 'bias_bram__parameterized0' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:6]
-INFO: [Synth 8-251] Loading FC2 bias file: ../../bram_init/fc2_biases.mem [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:20]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../bram_init/fc2_biases.mem'; please make sure the file is added to project and has read permission, ignoring [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'bias_bram__parameterized0' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:6]
-INFO: [Synth 8-6157] synthesizing module 'mac_array' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/mac_array.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'mac_array' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/mac_array.v:2]
-INFO: [Synth 8-6157] synthesizing module 'layer_two_fsm' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:6]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:88]
-INFO: [Synth 8-155] case statement is not full and has no default [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:161]
-INFO: [Synth 8-6155] done synthesizing module 'layer_two_fsm' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:6]
-INFO: [Synth 8-6157] synthesizing module 'control_fsm' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/control_fsm.v:2]
-WARNING: [Synth 8-6090] variable 'mac_accum_en' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/control_fsm.v:207]
-WARNING: [Synth 8-6090] variable 'mac_accum_reset' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/control_fsm.v:208]
-INFO: [Synth 8-6155] done synthesizing module 'control_fsm' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/control_fsm.v:2]
-INFO: [Synth 8-6157] synthesizing module 'argmax_fsm' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/argmax_fsm.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'argmax_fsm' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/argmax_fsm.v:1]
-INFO: [Synth 8-6157] synthesizing module 'seven_seg' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/seven_seg.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/seven_seg.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'mnist_fpga_accel' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_fpga_accel.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'mnist_accel_slave_lite_v1_0_S_AXI' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'mnist_accel' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mnist_accel' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mnist_accel_slave_lite_v1_0_S_AXI' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:171]
+INFO: [Synth 8-226] default block is never used [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:245]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:298]
+INFO: [Synth 8-226] default block is never used [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:391]
+INFO: [Synth 8-6157] synthesizing module 'mnist_fpga_accel' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_fpga_accel.v:8]
+INFO: [Synth 8-6157] synthesizing module 'pixel_buffer' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_buffer' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:14]
+INFO: [Synth 8-6157] synthesizing module 'weight_bram' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:6]
+INFO: [Synth 8-251] Loading FC2 weight file: ../../bram_init/weights.mem [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:21]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../bram_init/weights.mem'; please make sure the file is added to project and has read permission, ignoring [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'weight_bram__parameterized0' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:6]
+INFO: [Synth 8-251] Loading FC2 weight file: ../../bram_init/fc2_weights.mem [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:21]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../bram_init/fc2_weights.mem'; please make sure the file is added to project and has read permission, ignoring [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'weight_bram__parameterized0' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bias_bram' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:6]
+INFO: [Synth 8-251] Loading FC2 bias file: ../../bram_init/biases.mem [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:20]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../bram_init/biases.mem'; please make sure the file is added to project and has read permission, ignoring [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'bias_bram' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'bias_bram__parameterized0' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:6]
+INFO: [Synth 8-251] Loading FC2 bias file: ../../bram_init/fc2_biases.mem [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:20]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../bram_init/fc2_biases.mem'; please make sure the file is added to project and has read permission, ignoring [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'bias_bram__parameterized0' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:6]
+INFO: [Synth 8-6157] synthesizing module 'mac_array' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/mac_array.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mac_array' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/mac_array.v:2]
+INFO: [Synth 8-6157] synthesizing module 'layer_two_fsm' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:6]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:88]
+INFO: [Synth 8-155] case statement is not full and has no default [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:161]
+INFO: [Synth 8-6155] done synthesizing module 'layer_two_fsm' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:6]
+INFO: [Synth 8-6157] synthesizing module 'control_fsm' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/control_fsm.v:2]
+WARNING: [Synth 8-6090] variable 'mac_accum_en' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/control_fsm.v:207]
+WARNING: [Synth 8-6090] variable 'mac_accum_reset' is written by both blocking and non-blocking assignments, entire logic could be removed [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/control_fsm.v:208]
+INFO: [Synth 8-6155] done synthesizing module 'control_fsm' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/control_fsm.v:2]
+INFO: [Synth 8-6157] synthesizing module 'argmax_fsm' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/argmax_fsm.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'argmax_fsm' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/argmax_fsm.v:1]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/seven_seg.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/seven_seg.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'mnist_fpga_accel' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_fpga_accel.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'mnist_accel_slave_lite_v1_0_S_AXI' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'mnist_accel' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'fpga_mnist_mnist_accel_0_0' (0#1) [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_mnist_accel_0_0/synth/fpga_mnist_mnist_accel_0_0.v:53]
-WARNING: [Synth 8-3848] Net mem in module/entity weight_bram does not have driver. [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:17]
-WARNING: [Synth 8-3848] Net mem in module/entity weight_bram__parameterized0 does not have driver. [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/weight_bram.v:17]
-WARNING: [Synth 8-3848] Net mem in module/entity bias_bram does not have driver. [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:17]
-WARNING: [Synth 8-3848] Net mem in module/entity bias_bram__parameterized0 does not have driver. [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/bias_bram.v:17]
-WARNING: [Synth 8-7137] Register fc2_out_reg[0] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[1] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[2] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[3] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[4] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[5] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[6] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[7] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[8] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-7137] Register fc2_out_reg[9] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/39fb/layer_two_fsm.v:140]
-WARNING: [Synth 8-6014] Unused sequential element debug_cnt_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/control_fsm.v:221]
-WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:166]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg0_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:237]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:238]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:239]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:240]
-WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:313]
+WARNING: [Synth 8-3848] Net mem in module/entity weight_bram does not have driver. [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:17]
+WARNING: [Synth 8-3848] Net mem in module/entity weight_bram__parameterized0 does not have driver. [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/weight_bram.v:17]
+WARNING: [Synth 8-3848] Net mem in module/entity bias_bram does not have driver. [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:17]
+WARNING: [Synth 8-3848] Net mem in module/entity bias_bram__parameterized0 does not have driver. [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/bias_bram.v:17]
+WARNING: [Synth 8-7137] Register fc2_out_reg[0] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[1] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[2] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[3] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[4] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[5] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[6] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[7] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[8] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-7137] Register fc2_out_reg[9] in module layer_two_fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/39fb/layer_two_fsm.v:140]
+WARNING: [Synth 8-6014] Unused sequential element debug_cnt_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/control_fsm.v:221]
+WARNING: [Synth 8-6014] Unused sequential element axi_awaddr_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:166]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg0_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:237]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg1_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:238]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg2_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:239]
+WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:240]
+WARNING: [Synth 8-6014] Unused sequential element axi_araddr_reg was removed.  [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/hdl/mnist_accel_slave_lite_v1_0_S_AXI.v:313]
 WARNING: [Synth 8-7129] Port addr[3] in module bias_bram__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port addr[2] in module bias_bram__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port addr[1] in module bias_bram__parameterized0 is either unconnected or has no load
@@ -174,45 +174,45 @@ WARNING: [Synth 8-7129] Port S_AXI_ARPROT[2] in module mnist_accel_slave_lite_v1
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[1] in module mnist_accel_slave_lite_v1_0_S_AXI is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_ARPROT[0] in module mnist_accel_slave_lite_v1_0_S_AXI is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1225.980 ; gain = 655.047
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.516 ; gain = 653.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1225.980 ; gain = 655.047
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.516 ; gain = 653.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1225.980 ; gain = 655.047
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.516 ; gain = 653.887
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1225.980 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1223.516 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1252.363 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1306.129 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.212 . Memory (MB): peak = 1254.773 ; gain = 2.410
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.203 . Memory (MB): peak = 1306.254 ; gain = 0.125
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1254.773 ; gain = 683.840
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1306.254 ; gain = 736.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1254.773 ; gain = 683.840
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1306.254 ; gain = 736.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1254.773 ; gain = 683.840
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1306.254 ; gain = 736.625
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'layer_two_fsm'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'control_fsm'
@@ -275,7 +275,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_write_reg' using enc
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_read_reg' using encoding 'sequential' in module 'mnist_accel_slave_lite_v1_0_S_AXI'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1254.773 ; gain = 683.840
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1306.254 ; gain = 736.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -397,207 +397,207 @@ WARNING: [Synth 8-7129] Port s_axi_wdata[27] in module fpga_mnist_mnist_accel_0_
 WARNING: [Synth 8-7129] Port s_axi_wdata[26] in module fpga_mnist_mnist_accel_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s_axi_wdata[25] in module fpga_mnist_mnist_accel_0_0 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[6][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[6][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[0][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[1][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[2][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[3][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[4][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][5]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][4]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][3]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][2]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][1]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[5][0]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[6][7]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/u_pixel_buf/GEN_READ32.mem_reg[6][6]/Q' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
 INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
-CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/527e/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ipshared/7afa/src/pixel_buffer.v:54]
 INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 WARNING: [Synth 8-3332] Sequential element (mac_reg_reg[47]) is unused and will be removed from module layer_two_fsm.
 WARNING: [Synth 8-3332] Sequential element (mac_reg_reg[46]) is unused and will be removed from module layer_two_fsm.
@@ -655,10 +655,9 @@ WARNING: [Synth 8-3332] Sequential element (mac_reg_reg[26]__0) is unused and wi
 WARNING: [Synth 8-3332] Sequential element (mac_reg_reg[25]__0) is unused and will be removed from module layer_two_fsm.
 WARNING: [Synth 8-3332] Sequential element (mac_reg_reg[24]__0) is unused and will be removed from module layer_two_fsm.
 WARNING: [Synth 8-3332] Sequential element (mac_reg_reg[23]__0) is unused and will be removed from module layer_two_fsm.
-WARNING: [Synth 8-3332] Sequential element (mac_reg_reg[22]__0) is unused and will be removed from module layer_two_fsm.
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[0]) is unused and will be removed from module argmax_fsm.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 1254.773 ; gain = 683.840
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1306.254 ; gain = 736.625
 ---------------------------------------------------------------------------------
  Sort Area is  mac_reg0_0 : 0 0 : 1424 2783 : Used 1 time 0
  Sort Area is  mac_reg0_0 : 0 1 : 1359 2783 : Used 1 time 0
@@ -682,21 +681,21 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1397.105 ; gain = 826.172
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1406.324 ; gain = 836.695
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1398.000 ; gain = 827.066
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1407.367 ; gain = 837.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3332] Sequential element (inst/mnist_accel_slave_lite_v1_0_S_AXI_inst/top_mnist_fpga_instance/fc2_fsm/mac_reg_reg[16]) is unused and will be removed from module fpga_mnist_mnist_accel_0_0.
-INFO: [Synth 8-3332] Sequential element (i_435) is unused and will be removed from module fpga_mnist_mnist_accel_0_0.
+INFO: [Synth 8-3332] Sequential element (i_437) is unused and will be removed from module fpga_mnist_mnist_accel_0_0.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1417.078 ; gain = 846.145
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1426.488 ; gain = 856.859
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -714,37 +713,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1626.238 ; gain = 1055.305
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1633.863 ; gain = 1064.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1626.238 ; gain = 1055.305
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1633.863 ; gain = 1064.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1626.238 ; gain = 1055.305
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1633.863 ; gain = 1064.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1626.238 ; gain = 1055.305
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1633.863 ; gain = 1064.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1626.238 ; gain = 1055.305
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1633.863 ; gain = 1064.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1626.238 ; gain = 1055.305
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1633.863 ; gain = 1064.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -761,42 +760,42 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |    30|
-|2     |LUT1   |    41|
-|3     |LUT2   |    69|
+|2     |LUT1   |    42|
+|3     |LUT2   |    70|
 |4     |LUT3   |    38|
 |5     |LUT4   |    87|
 |6     |LUT5   |    27|
 |7     |LUT6   |   129|
-|8     |FDCE   |   486|
+|8     |FDCE   |   487|
 |9     |FDPE   |     2|
 |10    |FDRE   |   340|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1626.238 ; gain = 1055.305
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1633.863 ; gain = 1064.234
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 6144 critical warnings and 107 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:54 . Memory (MB): peak = 1626.238 ; gain = 1026.512
-Synthesis Optimization Complete : Time (s): cpu = 00:00:53 ; elapsed = 00:00:58 . Memory (MB): peak = 1626.238 ; gain = 1055.305
+Synthesis finished with 0 errors, 6144 critical warnings and 106 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1633.863 ; gain = 981.496
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1633.863 ; gain = 1064.234
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1626.238 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1633.863 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1626.863 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1633.863 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: f3018136
+Synth Design complete | Checksum: 88cdeb84
 INFO: [Common 17-83] Releasing license: Synthesis
-96 Infos, 184 Warnings, 204 Critical Warnings and 0 Errors encountered.
+96 Infos, 183 Warnings, 204 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:04 . Memory (MB): peak = 1626.863 ; gain = 1242.109
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1626.863 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 1633.863 ; gain = 1247.785
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1633.863 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_mnist_accel_0_0_synth_1/fpga_mnist_mnist_accel_0_0.dcp' has been generated.
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1626.863 ; gain = 0.000
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1633.863 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/vitis_mnist/mnist_fpga/mnist_fpga.runs/fpga_mnist_mnist_accel_0_0_synth_1/fpga_mnist_mnist_accel_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file fpga_mnist_mnist_accel_0_0_utilization_synth.rpt -pb fpga_mnist_mnist_accel_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jan  7 12:50:38 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Jan 12 11:40:41 2026...

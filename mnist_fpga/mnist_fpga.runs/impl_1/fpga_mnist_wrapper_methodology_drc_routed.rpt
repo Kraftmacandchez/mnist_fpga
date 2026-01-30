@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
-| Date         : Wed Jan  7 13:48:25 2026
+| Date         : Mon Jan 12 11:44:20 2026
 | Host         : DESKTOP-6GKB5CJ running 64-bit major release  (build 9200)
 | Command      : report_methodology -file fpga_mnist_wrapper_methodology_drc_routed.rpt -pb fpga_mnist_wrapper_methodology_drc_routed.pb -rpx fpga_mnist_wrapper_methodology_drc_routed.rpx
 | Design       : fpga_mnist_wrapper
@@ -23,15 +23,27 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max checks: <unlimited>
-             Checks found: 10
+             Checks found: 12
 +-----------+----------+-------------------------------+--------+
 | Rule      | Severity | Description                   | Checks |
 +-----------+----------+-------------------------------+--------+
+| LUTAR-1   | Warning  | LUT drives async reset alert  | 1      |
+| TIMING-9  | Warning  | Unknown CDC Logic             | 1      |
 | TIMING-18 | Warning  | Missing input or output delay | 10     |
 +-----------+----------+-------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell fpga_mnist_i/mdm_0/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) fpga_mnist_i/mdm_0/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
 TIMING-18#1 Warning
 Missing input or output delay  
 An input delay is missing on rst_button relative to the rising and/or falling clock edge(s) of sys_clock.

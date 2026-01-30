@@ -109,7 +109,7 @@ build install/strip: phony CMakeFiles/install/strip.util
 #############################################
 # Utility command for combined
 
-build libsrc/combined: phony libsrc/CMakeFiles/combined libsrc/uartlite/src/libuartlite.a
+build libsrc/combined: phony libsrc/CMakeFiles/combined libsrc/bram/src/libbram.a libsrc/uartns550/src/libuartns550.a
 
 
 #############################################
@@ -180,8 +180,138 @@ build libsrc/install/strip: phony libsrc/CMakeFiles/install/strip.util
 #############################################
 # Custom command for libsrc\CMakeFiles\combined
 
-build libsrc/CMakeFiles/combined | ${cmake_ninja_workdir}libsrc/CMakeFiles/combined: CUSTOM_COMMAND libsrc/uartlite/src/libuartlite.a || libsrc/uartlite/src/libuartlite.a
+build libsrc/CMakeFiles/combined | ${cmake_ninja_workdir}libsrc/CMakeFiles/combined: CUSTOM_COMMAND libsrc/bram/src/libbram.a libsrc/uartns550/src/libuartns550.a || libsrc/bram/src/libbram.a libsrc/uartns550/src/libuartns550.a
   COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp && mb-ar -M<C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libxil.mri && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E copy C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libxil.a C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/lib"
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target bram
+
+
+#############################################
+# Order-only phony target for bram
+
+build cmake_object_order_depends_target_bram: phony || libsrc/bram/src/CMakeFiles/bram.dir
+
+build libsrc/bram/src/CMakeFiles/bram.dir/xbram.c.obj: C_COMPILER__bram_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/bram/src/xbram.c || cmake_object_order_depends_target_bram
+  DEP_FILE = libsrc\bram\src\CMakeFiles\bram.dir\xbram.c.obj.d
+  FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+  OBJECT_FILE_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+
+build libsrc/bram/src/CMakeFiles/bram.dir/xbram_g.c.obj: C_COMPILER__bram_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/bram/src/xbram_g.c || cmake_object_order_depends_target_bram
+  DEP_FILE = libsrc\bram\src\CMakeFiles\bram.dir\xbram_g.c.obj.d
+  FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+  OBJECT_FILE_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+
+build libsrc/bram/src/CMakeFiles/bram.dir/xbram_intr.c.obj: C_COMPILER__bram_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/bram/src/xbram_intr.c || cmake_object_order_depends_target_bram
+  DEP_FILE = libsrc\bram\src\CMakeFiles\bram.dir\xbram_intr.c.obj.d
+  FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+  OBJECT_FILE_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+
+build libsrc/bram/src/CMakeFiles/bram.dir/xbram_selftest.c.obj: C_COMPILER__bram_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/bram/src/xbram_selftest.c || cmake_object_order_depends_target_bram
+  DEP_FILE = libsrc\bram\src\CMakeFiles\bram.dir\xbram_selftest.c.obj.d
+  FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+  OBJECT_FILE_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+
+build libsrc/bram/src/CMakeFiles/bram.dir/xbram_sinit.c.obj: C_COMPILER__bram_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/bram/src/xbram_sinit.c || cmake_object_order_depends_target_bram
+  DEP_FILE = libsrc\bram\src\CMakeFiles\bram.dir\xbram_sinit.c.obj.d
+  FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+  OBJECT_FILE_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target bram
+
+
+#############################################
+# Link the static library libsrc\bram\src\libbram.a
+
+build libsrc/bram/src/libbram.a: C_STATIC_LIBRARY_LINKER__bram_ libsrc/bram/src/CMakeFiles/bram.dir/xbram.c.obj libsrc/bram/src/CMakeFiles/bram.dir/xbram_g.c.obj libsrc/bram/src/CMakeFiles/bram.dir/xbram_intr.c.obj libsrc/bram/src/CMakeFiles/bram.dir/xbram_selftest.c.obj libsrc/bram/src/CMakeFiles/bram.dir/xbram_sinit.c.obj
+  LANGUAGE_COMPILE_FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include
+  OBJECT_DIR = libsrc\bram\src\CMakeFiles\bram.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = libsrc\bram\src\libbram.a
+  TARGET_PDB = bram.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build libsrc/bram/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\bram\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build libsrc/bram/src/edit_cache: phony libsrc/bram/src/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build libsrc/bram/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\bram\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SC:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp -BC:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build libsrc/bram/src/rebuild_cache: phony libsrc/bram/src/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build libsrc/bram/src/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build libsrc/bram/src/CMakeFiles/install.util: CUSTOM_COMMAND libsrc/bram/src/all
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\bram\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build libsrc/bram/src/install: phony libsrc/bram/src/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build libsrc/bram/src/CMakeFiles/install/local.util: CUSTOM_COMMAND libsrc/bram/src/all
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\bram\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build libsrc/bram/src/install/local: phony libsrc/bram/src/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build libsrc/bram/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND libsrc/bram/src/all
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\bram\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build libsrc/bram/src/install/strip: phony libsrc/bram/src/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -259,143 +389,157 @@ build libsrc/common/src/install/strip: phony libsrc/common/src/CMakeFiles/instal
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target uartlite
+# Object build statements for STATIC_LIBRARY target uartns550
 
 
 #############################################
-# Order-only phony target for uartlite
+# Order-only phony target for uartns550
 
-build cmake_object_order_depends_target_uartlite: phony || libsrc/uartlite/src/CMakeFiles/uartlite.dir
+build cmake_object_order_depends_target_uartns550: phony || libsrc/uartns550/src/CMakeFiles/uartns550.dir
 
-build libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite.c.obj: C_COMPILER__uartlite_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/xuartlite.c || cmake_object_order_depends_target_uartlite
-  DEP_FILE = libsrc\uartlite\src\CMakeFiles\uartlite.dir\xuartlite.c.obj.d
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550.c.obj.d
   FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
-  OBJECT_FILE_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
 
-build libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_g.c.obj: C_COMPILER__uartlite_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/xuartlite_g.c || cmake_object_order_depends_target_uartlite
-  DEP_FILE = libsrc\uartlite\src\CMakeFiles\uartlite.dir\xuartlite_g.c.obj.d
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_format.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550_format.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550_format.c.obj.d
   FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
-  OBJECT_FILE_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
 
-build libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_intr.c.obj: C_COMPILER__uartlite_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/xuartlite_intr.c || cmake_object_order_depends_target_uartlite
-  DEP_FILE = libsrc\uartlite\src\CMakeFiles\uartlite.dir\xuartlite_intr.c.obj.d
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_g.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550_g.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550_g.c.obj.d
   FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
-  OBJECT_FILE_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
 
-build libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_l.c.obj: C_COMPILER__uartlite_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/xuartlite_l.c || cmake_object_order_depends_target_uartlite
-  DEP_FILE = libsrc\uartlite\src\CMakeFiles\uartlite.dir\xuartlite_l.c.obj.d
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_intr.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550_intr.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550_intr.c.obj.d
   FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
-  OBJECT_FILE_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
 
-build libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_selftest.c.obj: C_COMPILER__uartlite_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/xuartlite_selftest.c || cmake_object_order_depends_target_uartlite
-  DEP_FILE = libsrc\uartlite\src\CMakeFiles\uartlite.dir\xuartlite_selftest.c.obj.d
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_l.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550_l.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550_l.c.obj.d
   FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
-  OBJECT_FILE_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
 
-build libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_sinit.c.obj: C_COMPILER__uartlite_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/xuartlite_sinit.c || cmake_object_order_depends_target_uartlite
-  DEP_FILE = libsrc\uartlite\src\CMakeFiles\uartlite.dir\xuartlite_sinit.c.obj.d
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_options.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550_options.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550_options.c.obj.d
   FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
-  OBJECT_FILE_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
 
-build libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_stats.c.obj: C_COMPILER__uartlite_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/xuartlite_stats.c || cmake_object_order_depends_target_uartlite
-  DEP_FILE = libsrc\uartlite\src\CMakeFiles\uartlite.dir\xuartlite_stats.c.obj.d
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_selftest.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550_selftest.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550_selftest.c.obj.d
   FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
   INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
-  OBJECT_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
-  OBJECT_FILE_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_sinit.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550_sinit.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550_sinit.c.obj.d
+  FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+
+build libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_stats.c.obj: C_COMPILER__uartns550_ C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/xuartns550_stats.c || cmake_object_order_depends_target_uartns550
+  DEP_FILE = libsrc\uartns550\src\CMakeFiles\uartns550.dir\xuartns550_stats.c.obj.d
+  FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include   -c  -g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns "-D__FILENAME__='__FILE__'"
+  INCLUDES = -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/include -isystem C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/lib/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/13.3.0/include-fixed -isystem C:/Xilinx/Vitis/2024.2/gnu/microblaze/nt/microblazeeb-xilinx-elf/usr/include
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
+  OBJECT_FILE_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target uartlite
+# Link build statements for STATIC_LIBRARY target uartns550
 
 
 #############################################
-# Link the static library libsrc\uartlite\src\libuartlite.a
+# Link the static library libsrc\uartns550\src\libuartns550.a
 
-build libsrc/uartlite/src/libuartlite.a: C_STATIC_LIBRARY_LINKER__uartlite_ libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite.c.obj libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_g.c.obj libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_intr.c.obj libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_l.c.obj libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_selftest.c.obj libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_sinit.c.obj libsrc/uartlite/src/CMakeFiles/uartlite.dir/xuartlite_stats.c.obj
+build libsrc/uartns550/src/libuartns550.a: C_STATIC_LIBRARY_LINKER__uartns550_ libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550.c.obj libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_format.c.obj libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_g.c.obj libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_intr.c.obj libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_l.c.obj libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_options.c.obj libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_selftest.c.obj libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_sinit.c.obj libsrc/uartns550/src/CMakeFiles/uartns550.dir/xuartns550_stats.c.obj
   LANGUAGE_COMPILE_FLAGS = -O2 -mlittle-endian -mxl-soft-mul -mcpu=v11.0 -DSDT  -MMD -MP -specs=C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Xilinx.spec -IC:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include
-  OBJECT_DIR = libsrc\uartlite\src\CMakeFiles\uartlite.dir
+  OBJECT_DIR = libsrc\uartns550\src\CMakeFiles\uartns550.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = libsrc\uartlite\src\libuartlite.a
-  TARGET_PDB = uartlite.a.dbg
+  TARGET_FILE = libsrc\uartns550\src\libuartns550.a
+  TARGET_PDB = uartns550.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build libsrc/uartlite/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartlite\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+build libsrc/uartns550/src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartns550\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build libsrc/uartlite/src/edit_cache: phony libsrc/uartlite/src/CMakeFiles/edit_cache.util
+build libsrc/uartns550/src/edit_cache: phony libsrc/uartns550/src/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build libsrc/uartlite/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartlite\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SC:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp -BC:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp"
+build libsrc/uartns550/src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartns550\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe --regenerate-during-build -SC:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp -BC:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build libsrc/uartlite/src/rebuild_cache: phony libsrc/uartlite/src/CMakeFiles/rebuild_cache.util
+build libsrc/uartns550/src/rebuild_cache: phony libsrc/uartns550/src/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build libsrc/uartlite/src/list_install_components: phony
+build libsrc/uartns550/src/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build libsrc/uartlite/src/CMakeFiles/install.util: CUSTOM_COMMAND libsrc/uartlite/src/all
-  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartlite\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -P cmake_install.cmake"
+build libsrc/uartns550/src/CMakeFiles/install.util: CUSTOM_COMMAND libsrc/uartns550/src/all
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartns550\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
 
-build libsrc/uartlite/src/install: phony libsrc/uartlite/src/CMakeFiles/install.util
+build libsrc/uartns550/src/install: phony libsrc/uartns550/src/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build libsrc/uartlite/src/CMakeFiles/install/local.util: CUSTOM_COMMAND libsrc/uartlite/src/all
-  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartlite\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+build libsrc/uartns550/src/CMakeFiles/install/local.util: CUSTOM_COMMAND libsrc/uartns550/src/all
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartns550\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build libsrc/uartlite/src/install/local: phony libsrc/uartlite/src/CMakeFiles/install/local.util
+build libsrc/uartns550/src/install/local: phony libsrc/uartns550/src/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build libsrc/uartlite/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND libsrc/uartlite/src/all
-  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartlite\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+build libsrc/uartns550/src/CMakeFiles/install/strip.util: CUSTOM_COMMAND libsrc/uartns550/src/all
+  COMMAND = cmd.exe /C "cd /D C:\vitis_mnist\mnist_platform\microblaze_0\standalone_microblaze_0\bsp\libsrc\build_configs\gen_bsp\libsrc\uartns550\src && C:\Xilinx\Vitis\2024.2\tps\win64\cmake-3.24.2\bin\cmake.exe -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build libsrc/uartlite/src/install/strip: phony libsrc/uartlite/src/CMakeFiles/install/strip.util
+build libsrc/uartns550/src/install/strip: phony libsrc/uartns550/src/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -1143,15 +1287,19 @@ build libsrc/xiltimer/src/core/default_timer/install/strip: phony libsrc/xiltime
 # =============================================================================
 # Target aliases.
 
+build bram: phony libsrc/bram/src/libbram.a
+
 build combined: phony libsrc/combined
 
-build libuartlite.a: phony libsrc/uartlite/src/libuartlite.a
+build libbram.a: phony libsrc/bram/src/libbram.a
+
+build libuartns550.a: phony libsrc/uartns550/src/libuartns550.a
 
 build libxilstandalone.a: phony libsrc/standalone/src/libxilstandalone.a
 
 build libxiltimer.a: phony libsrc/xiltimer/src/libxiltimer.a
 
-build uartlite: phony libsrc/uartlite/src/libuartlite.a
+build uartns550: phony libsrc/uartns550/src/libuartns550.a
 
 build xilstandalone: phony libsrc/standalone/src/libxilstandalone.a
 
@@ -1172,7 +1320,14 @@ build all: phony libsrc/all libsrc/standalone/src/all libsrc/xiltimer/src/all
 #############################################
 # Folder: C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc
 
-build libsrc/all: phony libsrc/combined libsrc/common/src/all libsrc/uartlite/src/all
+build libsrc/all: phony libsrc/combined libsrc/bram/src/all libsrc/common/src/all libsrc/uartns550/src/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/bram/src
+
+build libsrc/bram/src/all: phony libsrc/bram/src/libbram.a
 
 # =============================================================================
 
@@ -1212,9 +1367,9 @@ build libsrc/standalone/src/microblaze/all: phony
 # =============================================================================
 
 #############################################
-# Folder: C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartlite/src
+# Folder: C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartns550/src
 
-build libsrc/uartlite/src/all: phony libsrc/uartlite/src/libuartlite.a
+build libsrc/uartns550/src/all: phony libsrc/uartns550/src/libuartns550.a
 
 # =============================================================================
 
@@ -1244,14 +1399,14 @@ build libsrc/xiltimer/src/core/default_timer/all: phony
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeASMInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-ASM.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Platform/Generic.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Findcommon.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Findcommonmeta.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/DRVLISTConfig.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/common/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/MemConfig.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/bspconfig.h.in C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/StandaloneExample.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/intr/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/microblaze/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/xilstandalone.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/XiltimerExample.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/core/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/core/default_timer/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/xiltimer.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/xtimer_config.h.in C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/microblaze_toolchain.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeASMInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-ASM.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Platform/Generic.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Findcommon.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Findcommonmeta.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/DRVLISTConfig.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/bram/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/common/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/MemConfig.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/bspconfig.h.in C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/StandaloneExample.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/intr/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/microblaze/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/xilstandalone.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/XiltimerExample.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/core/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/core/default_timer/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/xiltimer.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/xtimer_config.h.in C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/microblaze_toolchain.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeASMInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-ASM.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Platform/Generic.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Findcommon.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Findcommonmeta.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/DRVLISTConfig.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/common/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/MemConfig.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/bspconfig.h.in C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/StandaloneExample.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/intr/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/microblaze/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/xilstandalone.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartlite/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/XiltimerExample.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/core/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/core/default_timer/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/xiltimer.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/xtimer_config.h.in C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/microblaze_toolchain.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeASMInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCXXInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeGenericSystem.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-ASM.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-C.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Compiler/GNU.cmake C$:/Xilinx/Vitis/2024.2/tps/win64/cmake-3.24.2/share/cmake-3.24/Modules/Platform/Generic.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Findcommon.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/Findcommonmeta.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/DRVLISTConfig.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/bram/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/common/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/MemConfig.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/bspconfig.h.in C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/StandaloneExample.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/common/intr/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/microblaze/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/standalone/src/xilstandalone.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/uartns550/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/XiltimerExample.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/core/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/core/default_timer/CMakeLists.txt C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/xiltimer.cmake C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/xiltimer/src/xtimer_config.h.in C$:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/microblaze_toolchain.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeASMCompiler.cmake CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################

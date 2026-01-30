@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 4
+set_param bd.open.in_stealth_mode 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -77,7 +78,7 @@ set_property ip_output_repo c:/vitis_mnist/mnist_fpga/mnist_fpga.cache/ip [curre
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/hdl/fpga_mnist_wrapper.v
+read_verilog -library xil_defaultlib C:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/hdl/fpga_mnist_wrapper.v
 add_files C:/vitis_mnist/mnist_fpga/mnist_fpga.srcs/sources_1/bd/fpga_mnist/fpga_mnist.bd
 set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_microblaze_0_0/fpga_mnist_microblaze_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_microblaze_0_0/fpga_mnist_microblaze_0_0_ooc_debug.xdc]
@@ -132,6 +133,8 @@ set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_f
 set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_axi_smc_0/smartconnect.xdc]
 set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_blk_mem_gen_0_0/fpga_mnist_blk_mem_gen_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_blk_mem_gen_1_0/fpga_mnist_blk_mem_gen_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_mdm_0_0/fpga_mnist_mdm_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_mdm_0_0/fpga_mnist_mdm_0_0_ooc_trace.xdc]
 set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/fpga_mnist_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/vitis_mnist/mnist_fpga/mnist_fpga.gen/sources_1/bd/fpga_mnist/ip/fpga_mnist_microblaze_0_0/data/mb_bootloop_le.elf]
 

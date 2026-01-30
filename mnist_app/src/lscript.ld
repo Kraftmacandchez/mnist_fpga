@@ -3,12 +3,13 @@
 * SPDX-License-Identifier: MIT
 ******************************************************************************/
 
-_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x400;
+_STACK_SIZE = DEFINED(_STACK_SIZE) ? _STACK_SIZE : 0x200;
 _HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x400;
 
 MEMORY
 {
-	lmb_bram_0 : ORIGIN = 0x50, LENGTH = 0x1fb0
+	axi_bram_ctrl_0 (rwx) : ORIGIN = 0xC0000000, LENGTH = 0x00002000
+   axi_bram_ctrl_1 (rwx) : ORIGIN = 0xC2000000, LENGTH = 0x00002000
 }
 
 /* Specify the default entry point to the program */
@@ -19,36 +20,37 @@ ENTRY(_start)
 
 SECTIONS
 {
-.vectors.reset 0x0 : {
-   KEEP (*(.vectors.reset))
-}
+/* Reserve vectors at the very start of axi_bram_ctrl_0 so .text cannot overlap them */
+. = ORIGIN(axi_bram_ctrl_0);
+.vectors : AT(ORIGIN(axi_bram_ctrl_0))
+{
+  KEEP(*(.vectors.reset))
+  KEEP(*(.vectors.sw_exception))
+  KEEP(*(.vectors.interrupt))
+  KEEP(*(.vectors.hw_exception))
+  KEEP(*(.vectors.*))
+  . = ALIGN(4);
+} > axi_bram_ctrl_0
 
-.vectors.sw_exception 0x8 : {
-   KEEP (*(.vectors.sw_exception))
-}
+/* Place .text immediately after vectors in axi_bram_ctrl_0 */
+. = ALIGN(4);
+.text : AT(ADDR(.text))
+{
+  *(.text)
+  *(.text.*)
+  *(.gnu.linkonce.t.*)
+  *(.note.gnu.build-id)
+  . = ALIGN(4);
+} > axi_bram_ctrl_0
 
-.vectors.interrupt 0x10 : {
-   KEEP (*(.vectors.interrupt))
-}
-
-.vectors.hw_exception 0x20 : {
-   KEEP (*(.vectors.hw_exception))
-}
-
-.text : {
-   *(.text)
-   *(.text.*)
-   *(.gnu.linkonce.t.*)
-   *(.note.gnu.build-id)
-} > lmb_bram_0
 
 .init : {
    KEEP (*(.init))
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .fini : {
    KEEP (*(.fini))
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .ctors : {
    __CTOR_LIST__ = .;
@@ -59,7 +61,7 @@ SECTIONS
    KEEP (*(.ctors))
    __CTOR_END__ = .;
    ___CTORS_END___ = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .dtors : {
    __DTOR_LIST__ = .;
@@ -70,7 +72,7 @@ SECTIONS
    KEEP (*(.dtors))
    PROVIDE(__DTOR_END__ = .);
    PROVIDE(___DTORS_END___ = .);
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .drvcfg_sec : {
     . = ALIGN(8);
@@ -78,7 +80,7 @@ SECTIONS
     KEEP (*(.drvcfg_sec))
     __drvcfgsecdata_end = .;
     __drvcfgsecdata_size = __drvcfgsecdata_end - __drvcfgsecdata_start;
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .rodata : {
    __rodata_start = .;
@@ -86,7 +88,7 @@ SECTIONS
    *(.rodata.*)
    *(.gnu.linkonce.r.*)
    __rodata_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .sdata2 : {
    . = ALIGN(8);
@@ -96,7 +98,7 @@ SECTIONS
    *(.gnu.linkonce.s2.*)
    . = ALIGN(8);
    __sdata2_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .sbss2 : {
    __sbss2_start = .;
@@ -104,7 +106,7 @@ SECTIONS
    *(.sbss2.*)
    *(.gnu.linkonce.sb2.*)
    __sbss2_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .data : {
    . = ALIGN(4);
@@ -113,31 +115,31 @@ SECTIONS
    *(.data.*)
    *(.gnu.linkonce.d.*)
    __data_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .got : {
    *(.got)
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .got1 : {
    *(.got1)
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .got2 : {
    *(.got2)
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .eh_frame : {
    *(.eh_frame)
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .jcr : {
    *(.jcr)
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .gcc_except_table : {
    *(.gcc_except_table)
-} > lmb_bram_0
+} > axi_bram_ctrl_0
 
 .sdata : {
    . = ALIGN(8);
@@ -146,7 +148,7 @@ SECTIONS
    *(.sdata.*)
    *(.gnu.linkonce.s.*)
    __sdata_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .sbss (NOLOAD) : {
    . = ALIGN(4);
@@ -156,7 +158,7 @@ SECTIONS
    *(.gnu.linkonce.sb.*)
    . = ALIGN(8);
    __sbss_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .tdata : {
    __tdata_start = .;
@@ -164,7 +166,7 @@ SECTIONS
    *(.tdata.*)
    *(.gnu.linkonce.td.*)
    __tdata_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .tbss : {
    __tbss_start = .;
@@ -172,7 +174,7 @@ SECTIONS
    *(.tbss.*)
    *(.gnu.linkonce.tb.*)
    __tbss_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .bss (NOLOAD) : {
    . = ALIGN(4);
@@ -183,7 +185,7 @@ SECTIONS
    *(COMMON)
    . = ALIGN(4);
    __bss_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 _SDA_BASE_ = __sdata_start + ((__sbss_end - __sdata_start) / 2 );
 
@@ -197,7 +199,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
    _heap_start = .;
    . += _HEAP_SIZE;
    _heap_end = .;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 .stack (NOLOAD) : {
    _stack_end = .;
@@ -205,7 +207,7 @@ _SDA2_BASE_ = __sdata2_start + ((__sbss2_end - __sdata2_start) / 2 );
    . = ALIGN(8);
    _stack = .;
    __stack = _stack;
-} > lmb_bram_0
+} > axi_bram_ctrl_1
 
 _end = .;
 }

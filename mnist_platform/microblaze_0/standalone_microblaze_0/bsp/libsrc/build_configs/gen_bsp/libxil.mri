@@ -1,4 +1,5 @@
 create libxil.a
-addlib C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartlite/src/libuartlite.a
+addlib C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/uartns550/src/libuartns550.a
+addlib C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/libsrc/build_configs/gen_bsp/libsrc/bram/src/libbram.a
 save
 end

@@ -8,6 +8,8 @@ C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/.
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/pvr.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/sleep.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbasic_types.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbram.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbram_hw.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xcommon_drv_config.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xdebug.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xenv.h
@@ -38,9 +40,9 @@ C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/.
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xplatform_info.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xstatus.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xtimer_config.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite_i.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite_l.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550_i.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550_l.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/lib/libxilstandalone.a
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/bspconfig.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/fsl.h
@@ -52,6 +54,8 @@ C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/.
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/pvr.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/sleep.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbasic_types.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbram.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbram_hw.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xcommon_drv_config.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xdebug.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xenv.h
@@ -82,9 +86,9 @@ C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/.
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xplatform_info.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xstatus.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xtimer_config.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite_i.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite_l.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550_i.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550_l.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/lib/libxiltimer.a
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/bspconfig.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/fsl.h
@@ -96,6 +100,8 @@ C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/.
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/pvr.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/sleep.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbasic_types.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbram.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xbram_hw.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xcommon_drv_config.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xdebug.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xenv.h
@@ -126,6 +132,6 @@ C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/.
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xplatform_info.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xstatus.h
 C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xtimer_config.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite_i.h
-C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartlite_l.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550_i.h
+C:/vitis_mnist/mnist_platform/microblaze_0/standalone_microblaze_0/bsp/include/../include/xuartns550_l.h

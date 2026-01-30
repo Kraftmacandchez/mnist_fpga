@@ -1,1 +1,1 @@
-set(DRIVER_LIST common;uartlite)
+set(DRIVER_LIST bram;common;uartns550)

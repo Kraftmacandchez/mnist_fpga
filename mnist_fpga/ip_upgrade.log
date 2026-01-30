@@ -1,0 +1,58 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Sat Jan 10 17:02:27 2026
+| Host         : DESKTOP-6GKB5CJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fpga_mnist_mnist_accel_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of fpga_mnist_mnist_accel_0_0 (xilinx.com:user:mnist_accel:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Fri Jan  9 14:33:20 2026
+| Host         : DESKTOP-6GKB5CJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fpga_mnist_mnist_accel_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of fpga_mnist_mnist_accel_0_0 (xilinx.com:user:mnist_accel:1.0) from (Rev. 4) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Fri Jan  9 14:25:30 2026
+| Host         : DESKTOP-6GKB5CJ running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a35tcpg236-1
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'fpga_mnist_mnist_accel_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the update of fpga_mnist_mnist_accel_0_0 (xilinx.com:user:mnist_accel:1.0 (Rev. 4)) to current project options.
+

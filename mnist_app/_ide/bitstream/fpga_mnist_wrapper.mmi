@@ -11,16 +11,16 @@
 
 <MemInfo Version="1" Minor="9">
   <Processor Endianness="Little" InstPath="fpga_mnist_i/microblaze_0">
-    <AddressSpace Name="fpga_mnist_i_microblaze_0.fpga_mnist_i_lmb_bram_if_cntlr_1" Begin="0" End="8191">
-      <AddressSpaceRange Name="fpga_mnist_i_microblaze_0.fpga_mnist_i_lmb_bram_if_cntlr_1" Begin="0" End="8191" CoreMemory_Width="0" MemoryType="RAM_SP" MemoryConfiguration="">
+    <AddressSpace Name="fpga_mnist_i_microblaze_0.fpga_mnist_i_lmb_bram_if_cntlr_0" Begin="0" End="8191">
+      <AddressSpaceRange Name="fpga_mnist_i_microblaze_0.fpga_mnist_i_lmb_bram_if_cntlr_0" Begin="0" End="8191" CoreMemory_Width="0" MemoryType="RAM_SP" MemoryConfiguration="">
         <BusBlock>
-          <BitLane MemType="RAMB36" Placement="X1Y3" Read_Width="0" SLR_INDEX="-1">
+          <BitLane MemType="RAMB36" Placement="X0Y2" Read_Width="0" SLR_INDEX="-1">
             <DataWidth MSB="15" LSB="0"/>
             <AddressRange Begin="0" End="2047"/>
             <BitLayout pattern=""/>
             <Parity ON="false" NumBits="0"/>
           </BitLane>
-          <BitLane MemType="RAMB36" Placement="X1Y2" Read_Width="0" SLR_INDEX="-1">
+          <BitLane MemType="RAMB36" Placement="X0Y1" Read_Width="0" SLR_INDEX="-1">
             <DataWidth MSB="31" LSB="16"/>
             <AddressRange Begin="0" End="2047"/>
             <BitLayout pattern=""/>
@@ -29,10 +29,10 @@
         </BusBlock>
       </AddressSpaceRange>
     </AddressSpace>
-    <AddressSpace Name="fpga_mnist_i_microblaze_0.fpga_mnist_i_lmb_bram_if_cntlr_0" Begin="0" End="8191">
-      <AddressSpaceRange Name="fpga_mnist_i_microblaze_0.fpga_mnist_i_lmb_bram_if_cntlr_0" Begin="0" End="8191" CoreMemory_Width="0" MemoryType="RAM_SP" MemoryConfiguration="">
+    <AddressSpace Name="fpga_mnist_i_microblaze_0.fpga_mnist_i_lmb_bram_if_cntlr_1" Begin="8192" End="16383">
+      <AddressSpaceRange Name="fpga_mnist_i_microblaze_0.fpga_mnist_i_lmb_bram_if_cntlr_1" Begin="8192" End="16383" CoreMemory_Width="0" MemoryType="RAM_SP" MemoryConfiguration="">
         <BusBlock>
-          <BitLane MemType="RAMB36" Placement="X2Y3" Read_Width="0" SLR_INDEX="-1">
+          <BitLane MemType="RAMB36" Placement="X1Y2" Read_Width="0" SLR_INDEX="-1">
             <DataWidth MSB="15" LSB="0"/>
             <AddressRange Begin="0" End="2047"/>
             <BitLayout pattern=""/>

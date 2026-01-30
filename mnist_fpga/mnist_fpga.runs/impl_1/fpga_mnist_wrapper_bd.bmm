@@ -21,21 +21,21 @@ ADDRESS_MAP fpga_mnist_i_microblaze_0 MICROBLAZE-LE 100 fpga_mnist_i/microblaze_
 
     ADDRESS_SPACE fpga_mnist_i_lmb_bram_if_cntlr_0 RAMB32 [0X0000000000000000:0X0000000000001FFF] fpga_mnist_i/lmb_bram_if_cntlr_0
         BUS_BLOCK
-            fpga_mnist_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SP_NO_ECC_ATTR.ram RAMB32 [31:16] [0:2047] PLACED = X2Y2;
-            fpga_mnist_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SP_NO_ECC_ATTR.ram RAMB32 [15:0] [0:2047] PLACED = X2Y3;
+            fpga_mnist_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SP_NO_ECC_ATTR.ram RAMB32 [31:16] [0:2047] PLACED = X1Y1;
+            fpga_mnist_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SP_NO_ECC_ATTR.ram RAMB32 [15:0] [0:2047] PLACED = X1Y2;
         END_BUS_BLOCK;
     END_ADDRESS_SPACE;
 
 
     ///////////////////////////////////////////////////////////////////////////////
     //
-    // Processor 'fpga_mnist_i_microblaze_0' address space 'fpga_mnist_i_lmb_bram_if_cntlr_1' 0X0000000000000000:0X0000000000001FFF (8 KBytes).
+    // Processor 'fpga_mnist_i_microblaze_0' address space 'fpga_mnist_i_lmb_bram_if_cntlr_1' 0X0000000000000002:0X0000000000002001 (8 KBytes).
     //
     ///////////////////////////////////////////////////////////////////////////////
 
-    ADDRESS_SPACE fpga_mnist_i_lmb_bram_if_cntlr_1 RAMB32 [0X0000000000000000:0X0000000000001FFF] fpga_mnist_i/lmb_bram_if_cntlr_1
+    ADDRESS_SPACE fpga_mnist_i_lmb_bram_if_cntlr_1 RAMB32 [0X0000000000000002:0X0000000000002001] fpga_mnist_i/lmb_bram_if_cntlr_1
         BUS_BLOCK
-            fpga_mnist_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SP_NO_ECC_ATTR.ram RAMB32 [31:16] [0:2047] PLACED = X1Y2;
+            fpga_mnist_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SP_NO_ECC_ATTR.ram RAMB32 [31:16] [0:2047] PLACED = X2Y3;
             fpga_mnist_i/blk_mem_gen_1/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.WITH_BMM_INFO.SP.SIMPLE_PRIM36.SP_NO_ECC_ATTR.ram RAMB32 [15:0] [0:2047] PLACED = X1Y3;
         END_BUS_BLOCK;
     END_ADDRESS_SPACE;

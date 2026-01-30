@@ -3,7 +3,7 @@
   "type": "PLATFORM",
   "configuration": {
     "description": "",
-    "xsa": "C:\\vitis_mnist\\mnist_fpga\\fpga_mnist_wrapper.xsa",
+    "xsa": "C:\\vitis_mnist\\clean_build\\fpga_mnist_wrapper.xsa",
     "xsaPathInPlatform": "mnist_platform\\hw\\fpga_mnist_wrapper.xsa",
     "emulationXsa": "",
     "emulationXsaPathInPlatform": "",

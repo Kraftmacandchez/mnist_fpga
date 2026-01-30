@@ -24,10 +24,10 @@ XMicroblaze_Config XMicroblaze_ConfigTable[] __attribute__ ((section (".drvcfg_s
 		0x1,  /* xlnx,allow-icache-wr */
 		0x0,  /* xlnx,area-optimized */
 		0x2000,  /* xlnx,cache-byte-size */
-		0x1,  /* xlnx,d-lmb */
+		0x0,  /* xlnx,d-lmb */
 		 0,  /* xlnx,d-opb */
 		 0,  /* xlnx,d-plb */
-		0x1,  /* xlnx,i-lmb */
+		0x0,  /* xlnx,i-lmb */
 		 0,  /* xlnx,i-opb */
 		 0,  /* xlnx,i-plb */
 		0x0,  /* xlnx,dcache-addr-tag */
@@ -79,6 +79,6 @@ XMicroblaze_Config XMicroblaze_ConfigTable[] __attribute__ ((section (".drvcfg_s
 		 0,  /* microblaze_ddr_reserve_sa */
 		 0,  /* microblaze_ddr_reserve_ea */
 		0x0,  /* reg */
-		0x0  /* xlnx,base-vectors */
+		0xc0000000  /* xlnx,base-vectors */
 	}
 };
